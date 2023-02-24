@@ -14,5 +14,10 @@ $oval-left: #6259ff;
 $oval-right: #f9818e;
 $oval-ball: #ffaf7e;
 
-
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
 
