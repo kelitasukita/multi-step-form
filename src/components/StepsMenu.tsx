@@ -1,7 +1,11 @@
-function StepMenus(){
+import MenuItem from '../components/MenuItem';
+
+function StepMenu(){
   return (
-    <h1>Menus</h1>
+    <div className="container">
+      <MenuItem />
+    </div>
   )
 }
 
-export default StepMenus();
+export default StepMenu;
