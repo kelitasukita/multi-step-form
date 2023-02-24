@@ -1,8 +1,16 @@
+import StepsMenu from "./components/StepsMenu";
+
+import './App.scss';
 
 function App() {
 
   return (
-      <h1>Teste</h1>
+    <div className="container">
+      <div className="box-container">
+        <StepsMenu />
+
+      </div>
+    </div>
   )
 }
 
