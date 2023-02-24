@@ -1,8 +1,48 @@
 @import '../../global.scss';
 
-.container {
-  width: 100vw;
-  height: 100vh;
-  // background: url(../../assets/images/bg-sidebar-desktop.svg) no-repeat;
+.container-step {
+  width: 135px;
+  height: 33px; 
+  display: flex;
+  margin-left: 32px;
   
+  .step-ball {
+    width: 33px;
+    height: 33px;
+    border: 1px solid $white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    p {
+      color: $white ;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    
+  }
+
+  .step1 {
+    width: 86px;
+    height: 33px;
+    margin-left: 16px;
+
+    p {
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 400;
+      color: $light-blue;
+    }
+
+    strong {
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: $white;
+    }
+  }
 }
