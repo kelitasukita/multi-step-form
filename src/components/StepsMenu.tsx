@@ -1,11 +1,15 @@
-import MenuItem from '../components/MenuItem';
+import MenuItem from './MenuItem/index';
 
-function StepMenu(){
-  return (
+import './StepsMenu.scss';
+
+export default function StepsMenu() {
+  return(
     <div className="container">
-      <MenuItem />
+      <div className="container-box">
+        <div className="menu-box">
+          <MenuItem />
+        </div>
+      </div>
     </div>
   )
 }
-
-export default StepMenu;
