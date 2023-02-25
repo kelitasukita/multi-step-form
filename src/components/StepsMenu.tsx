@@ -8,6 +8,9 @@ export default function StepsMenu() {
       <div className="container-box">
         <div className="menu-box">
           <MenuItem />
+          <MenuItem />
+          <MenuItem />
+          <MenuItem />
         </div>
       </div>
     </div>

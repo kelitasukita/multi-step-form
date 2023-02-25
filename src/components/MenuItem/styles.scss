@@ -5,6 +5,9 @@
   height: 33px; 
   display: flex;
   margin-left: 32px;
+  margin-bottom: 32px;
+
+  cursor: pointer;
   
   .step-ball {
     width: 33px;
@@ -21,6 +24,14 @@
       font-weight: 700;
       font-size: 14px;
       line-height: 16px;
+    }
+
+    :active {
+      color: $sky-blue;
+
+      p {
+        color: $denin;
+      }
     }
     
   }
