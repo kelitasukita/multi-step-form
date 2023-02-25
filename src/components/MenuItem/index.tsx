@@ -1,15 +1,15 @@
 import './styles.scss';
 
-export default function menuItem() {
+export default function menuItem(props: any) {
   return (
     
     <div className="container-step">
       <div className="step-ball">
-        <p>1</p>
+        <p>{props.stepNumberBall}</p>
       </div>
       <div className="step1">
-        <p>STEP 1</p>
-        <strong>YOUR INFO</strong>
+        <p>{props.stepNumberTitle}</p>
+        <strong>{props.title}</strong>
       </div>
     </div>
   )
