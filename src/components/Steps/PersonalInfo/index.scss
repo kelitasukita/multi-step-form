@@ -4,17 +4,107 @@
   width: 450px;
   height: 372px;
 
-  h1 {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 37px;
-    color: $denin;
+  .title-info {
+    width: 450px;
+    height: 68px;
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 37px;
+      color: $denin;
+    }
+  
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 40px;
+      color: $grey;
+    }
   }
 
-  p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 25px;
-    color: $grey;
+  .name-box {
+    width: 450px;
+    height: 72px;
+    margin-top: 40px;
+
+    label {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      color: $denin;
+    }
+
+    input {
+      width: 450px;
+      height: 48px;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 25px;
+      color: $grey;
+
+      padding-left: 16px;
+
+
+    }
   }
+  .email-box {
+    width: 450px;
+    height: 72px;
+    margin-top: 24px;
+
+    label {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      color: $denin;
+    }
+
+    input {
+      width: 450px;
+      height: 48px;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 25px;
+      color: $grey;
+
+      padding-left: 16px;
+
+
+    }
+  }
+  .phone-box {
+    width: 450px;
+    height: 72px;
+    margin-top: 24px;
+
+    label {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      color: $denin;
+    }
+
+    input {
+      width: 450px;
+      height: 48px;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 25px;
+      color: $grey;
+
+      padding-left: 16px;
+
+    }
+  }
+
 }
