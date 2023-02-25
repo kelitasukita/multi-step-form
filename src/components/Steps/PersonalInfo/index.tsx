@@ -22,6 +22,10 @@ export default function personalInfo() {
         <input type="text" placeholder='e.g. +1 234567 890'/>
       </div>
 
+      
+      <button type="submit">Next Step</button>
+      
+
     </div>
   )
 }
