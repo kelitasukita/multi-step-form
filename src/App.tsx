@@ -1,12 +1,11 @@
 import StepsMenu from './components/StepsMenu';
 
 function App() {
-
   return (
-  
-      <StepsMenu />
-  
-  )
+
+    <StepsMenu />
+
+  );
 }
 
-export default App
+export default App;

@@ -17,14 +17,13 @@ export default function personalInfo() {
         <label htmlFor="name">Email Address</label>
         <input type="text" placeholder='e.g. stephenking@lorem.com'/>
       </div>
+
       <div className="phone-box">
         <label htmlFor="name">Phone Number</label>
         <input type="text" placeholder='e.g. +1 234567 890'/>
       </div>
-
       
-      <button type="submit">Next Step</button>
-      
+      <button type="submit">Next Step</button>   
 
     </div>
   )
