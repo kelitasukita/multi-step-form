@@ -1,5 +1,6 @@
 import MenuItem from './MenuItem/index';
 import PersonalInfo from './Steps/PersonalInfo/index';
+import SelectPlan from './Steps/SelectPlan';
 
 import './StepsMenu.scss';
 
@@ -15,7 +16,8 @@ export default function StepsMenu() {
         </div>
 
         <div className="form-container">
-          <PersonalInfo />
+          {/* <PersonalInfo /> */}
+          <SelectPlan />
         </div>
       </div>
 
