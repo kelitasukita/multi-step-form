@@ -1,0 +1,91 @@
+@import '../../../global.scss';
+
+@mixin plan-boxes {
+  width: 138px;
+  height: 160px;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+
+  label {
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18px;
+      color: $denin;
+    }
+  
+    span {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $grey;
+    }
+  }
+
+  }
+
+.plan-container {
+  width: 450px;
+  height: 372px;
+
+  .plan-title {
+    width: 450px;
+    height: 58px;
+    margin-bottom: 40px;
+  }
+
+  .option-plans {
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+
+    .arcade-plan {
+      svg {
+        background: url(../../../assets/icons/icon-arcade.svg);
+        width: 40px;
+        height: 40px;
+      }
+      @include plan-boxes;
+    }
+    
+    .advanced-plan {
+      svg {
+        background: url(../../../assets/icons/icon-advanced.svg);
+        width: 40px;
+        height: 40px;
+      }
+      @include plan-boxes;
+    }
+    
+    .pro-plan {
+      svg {
+        background: url(../../../assets/icons/icon-pro.svg);
+        width: 40px;
+        height: 40px;
+      }
+      @include plan-boxes;
+    }
+  }
+
+  .month-year {
+    width: 450px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    margin-bottom: 116px;
+
+  }
+
+  .back-next {
+    width: 450px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+}
