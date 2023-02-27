@@ -26,8 +26,17 @@
       line-height: 16px;
     }
 
-    :active {
-      color: $sky-blue;
+    &:active {
+      background: $sky-blue;
+
+      p {
+        color: $denin;
+      }
+    }
+
+
+    &.selected {
+      background: $sky-blue;
 
       p {
         color: $denin;

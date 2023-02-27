@@ -2,9 +2,9 @@ import './styles.scss';
 
 export default function menuItem(props: any) {
   return (
-    
+
     <div className="container-step">
-      <div className="step-ball">
+      <div className={`step-ball ${props.selected}`}>
         <p>{props.stepNumberBall}</p>
       </div>
       <div className="step1">
