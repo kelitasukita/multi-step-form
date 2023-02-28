@@ -41,12 +41,14 @@ export default function SelectPlan() {
       </div>
 
       <div className="month-year">
-        <span>Monthly</span>
-        <label className="switch">
-          <input type="checkbox" checked />
-          <strong className="slider round" />
-        </label>
-        <span>Yearly</span>
+        <div className="better-together">
+          <span>Monthly</span>
+          <label className="switch">
+            <input type="checkbox" />
+            <strong className="slider round" />
+          </label>
+          <span>Yearly</span>
+        </div>
       </div>
 
       <div className="back-next">
