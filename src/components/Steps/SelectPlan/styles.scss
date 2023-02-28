@@ -40,8 +40,8 @@ height: 372px;
 
 .plan-title {
   width: 450px;
-  height: 58px;
-  margin-bottom: 40px;
+  height: 68px;
+  margin-bottom: 30px;
 
   h1 {
     font-size: 32px;
@@ -94,13 +94,17 @@ height: 372px;
 }
 
 .month-year {
+  background: $very-light-grey;
   width: 450px;
   height: 48px;
+
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   margin-bottom: 116px;
+  border-radius: 8px;
+
 
 }
 
