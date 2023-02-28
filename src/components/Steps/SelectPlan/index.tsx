@@ -12,35 +12,43 @@ export default function SelectPlan() {
         <div className="arcade-plan">
           <label htmlFor="arcade">
             <svg />
-            <p>Arcade</p>
-            <span>$9/mo</span>
+            <div className="plan-price">
+              <p>Arcade</p>
+              <span>$9/mo</span>
+            </div>
           </label>
         </div>
 
         <div className="advanced-plan">
           <label htmlFor="advanced">
             <svg />
-            <p>Advanced</p>
-            <span>$12/mo</span>
+            <div className="plan-price">
+              <p>Advanced</p>
+              <span>$12/mo</span>
+            </div>
           </label>
         </div>
 
         <div className="pro-plan">
           <label htmlFor="pro">
             <svg />
-            <p>Pro</p>
-            <span>$15/mo</span>
+            <div className="plan-price">
+              <p>Pro</p>
+              <span>$15/mo</span>
+            </div>
           </label>
         </div>
       </div>
 
       <div className="month-year">
-        <span>Monthly</span>
-        <label className="switch">
-          <input type="checkbox" checked />
-          <strong className="slider round" />
-        </label>
-        <span>Yearly</span>
+        <div className="better-together">
+          <span>Monthly</span>
+          <label className="switch">
+            <input type="checkbox" />
+            <strong className="slider round" />
+          </label>
+          <span>Yearly</span>
+        </div>
       </div>
 
       <div className="back-next">
