@@ -12,24 +12,30 @@ export default function SelectPlan() {
         <div className="arcade-plan">
           <label htmlFor="arcade">
             <svg />
-            <p>Arcade</p>
-            <span>$9/mo</span>
+            <div className="plan-price">
+              <p>Arcade</p>
+              <span>$9/mo</span>
+            </div>
           </label>
         </div>
 
         <div className="advanced-plan">
           <label htmlFor="advanced">
             <svg />
-            <p>Advanced</p>
-            <span>$12/mo</span>
+            <div className="plan-price">
+              <p>Advanced</p>
+              <span>$12/mo</span>
+            </div>
           </label>
         </div>
 
         <div className="pro-plan">
           <label htmlFor="pro">
             <svg />
-            <p>Pro</p>
-            <span>$15/mo</span>
+            <div className="plan-price">
+              <p>Pro</p>
+              <span>$15/mo</span>
+            </div>
           </label>
         </div>
       </div>
