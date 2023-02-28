@@ -38,7 +38,7 @@ export default function SelectPlan() {
         <span>Monthly</span>
         <label className="switch">
           <input type="checkbox" checked />
-          <span className="slider round"></span>
+          <strong className="slider round" />
         </label>
         <span>Yearly</span>
       </div>
