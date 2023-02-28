@@ -5,6 +5,17 @@
   height: 160px;
   border: 1px solid $border-color;
   border-radius: 8px;
+
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $purple;
+  }
+
+  &:active {
+    border: 1px solid $purple;
+    background: $very-light-grey;
+  }
 }
 
 @mixin plan-icons {
@@ -104,6 +115,18 @@ height: 372px;
 
   margin-bottom: 116px;
   border-radius: 8px;
+
+  span {
+    color: $grey;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:active {
+      color: $denin;
+    }
+  }
 
   .better-together {
     width: 183px;
