@@ -11,7 +11,7 @@ export default function SelectPlan() {
       <div className="option-plans">
         <div className="arcade-plan">
           <label htmlFor="arcade">
-            <svg>teste</svg>
+            <svg />
             <p>Arcade</p>
             <span>$9/mo</span>
           </label>
@@ -27,7 +27,7 @@ export default function SelectPlan() {
 
         <div className="pro-plan">
           <label htmlFor="pro">
-            <svg></svg>
+            <svg />
             <p>Pro</p>
             <span>$15/mo</span>
           </label>
