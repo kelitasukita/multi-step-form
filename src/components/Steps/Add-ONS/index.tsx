@@ -9,32 +9,38 @@ export default function AddOns() {
       </div>
 
       <div className="add-ons-options">
-        <div className="opt-1">
+        <div className="option">
           <input type="checkbox" />
           <div className="description">
             <strong>Online Service</strong>
             <p>Access to multiplayer games</p>
           </div>
-          <span>+$10/yr</span>
+          <div className="price">
+            <span>+$10/yr</span>
+          </div>
 
         </div>
 
-        <div className="opt-1">
+        <div className="option">
           <input type="checkbox" />
           <div className="description">
             <strong>Larger storage</strong>
             <p>Extra 1TB of cloud save</p>
           </div>
-          <span>+$20/yr</span>
+          <div className="price">
+            <span>+$10/yr</span>
+          </div>
         </div>
 
-        <div className="opt-1">
+        <div className="option">
           <input type="checkbox" />
           <div className="description">
             <strong>Customizable profile</strong>
             <p>Custom theme on your profile</p>
           </div>
-          <span>+$20/yr</span>
+          <div className="price">
+            <span>+$10/yr</span>
+          </div>
         </div>
 
         <div className="back-next">
