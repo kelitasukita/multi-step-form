@@ -1,0 +1,63 @@
+@import '../../../global.scss';
+
+.summary-title {
+  @include title-style;
+  margin-bottom: 40px;
+
+}
+
+.selected-products {
+  width: 450px;
+  height: 228px;
+
+  .selected-plan {
+    width: 450px;
+    height: 182px;
+    background: $very-light-grey;
+    border-radius: 8px;
+
+    padding: 16px 24px;
+  }
+}
+
+.back-next {
+  width: 450px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 81px;
+
+  span {
+    color: $grey;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+
+    cursor: pointer;
+
+    &:hover {
+      color: $denin;
+      transition: .2s;
+    }
+  }
+}
+
+button {
+  width: 123px;
+  height: 48px;
+  background: $purple;
+  border-radius: 8px;
+  border: none;
+  
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $white;
+
+  float: right;
+
+  cursor: pointer;
+
+}
