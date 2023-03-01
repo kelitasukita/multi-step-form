@@ -50,8 +50,7 @@ width: 450px;
 height: 372px;
 
 .plan-title {
-  width: 450px;
-  height: 68px;
+  @include title-style;
   margin-bottom: 30px;
 
   h1 {

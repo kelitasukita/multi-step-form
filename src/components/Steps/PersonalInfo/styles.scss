@@ -34,23 +34,8 @@
   height: 372px;
 
   .title-info {
-    width: 450px;
-    height: 68px;
-    margin-bottom: 40px;
-
-    h1 {
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 37px;
-      color: $denin;
-    }
-    
-    p {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 40px;
-      color: $grey;
-    }
+   @include title-style;
+   margin-bottom: 40px;
   }
 
   .name-box {
