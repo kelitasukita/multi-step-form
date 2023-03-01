@@ -10,36 +10,47 @@ export default function AddOns() {
 
       <div className="add-ons-options">
         <div className="option">
-          <input type="checkbox" />
-          <div className="description">
-            <strong>Online Service</strong>
-            <p>Access to multiplayer games</p>
+          <div className="checkmark">
+            <input className='check' type="checkbox" />
+            <label htmlFor="check">
+              {/* <div className="description"> */}
+              <strong>Online Service</strong>
+              <p>Access to multiplayer games</p>
+              {/* </div> */}
+            </label>
           </div>
           <div className="price">
-            <span>+$10/yr</span>
-          </div>
-
-        </div>
-
-        <div className="option">
-          <input type="checkbox" />
-          <div className="description">
-            <strong>Larger storage</strong>
-            <p>Extra 1TB of cloud save</p>
-          </div>
-          <div className="price">
-            <span>+$10/yr</span>
+            <span>+$1/mo</span>
           </div>
         </div>
 
         <div className="option">
-          <input type="checkbox" />
-          <div className="description">
-            <strong>Customizable profile</strong>
-            <p>Custom theme on your profile</p>
+          <div className="checkmark">
+            <input className='check' type="checkbox" />
+            <label htmlFor="check">
+              <div className="description">
+                <strong>Larger storage</strong>
+                <p>Extra 1TB of cloud save</p>
+              </div>
+            </label>
           </div>
           <div className="price">
-            <span>+$10/yr</span>
+            <span>+$2/mo</span>
+          </div>
+        </div>
+
+        <div className="option">
+          <div className="checkmark">
+            <input className='check' type="checkbox" />
+            <label htmlFor="check">
+              <div className="description">
+                <strong>Customizable profile</strong>
+                <p>Custom theme on your profile</p>
+              </div>
+            </label>
+          </div>
+          <div className="price">
+            <span>+$2/mo</span>
           </div>
         </div>
 
