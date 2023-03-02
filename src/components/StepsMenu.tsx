@@ -1,8 +1,8 @@
 import MenuItem from './MenuItem';
-import PersonalInfo from './Steps/PersonalInfo/index';
-import SelectPlan from './Steps/SelectPlan';
-import AddOns from './Steps/Add-ONS';
-import Summary from './Steps/Summary';
+import PersonalInfo from './Steps/PersonalInfo/PersonalInfo';
+import SelectPlan from './Steps/SelectPlan/SelectPlan';
+import AddOns from './Steps/Add-ONS/Add-ons';
+import Summary from './Steps/Summary/Summary';
 
 import './StepsMenu.scss';
 
