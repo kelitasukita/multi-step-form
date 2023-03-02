@@ -1,9 +1,9 @@
-import StepsMenu from './components/StepsMenu';
+import { RouterProvider } from "react-router-dom";
+import router from "./components/routes/Routes";
 
 function App() {
   return (
-
-    <StepsMenu />
+    <RouterProvider router={router} />
 
   );
 }
