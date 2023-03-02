@@ -11,12 +11,16 @@ export default function Summary() {
       <div className="finish-container">
         <div className="selected-products">
           <div className="selected-plan">
-            <strong>Arcade (Monthly)</strong>
-            <span>Change</span>
+            <div className="description-plan">
+              <strong>Arcade (Monthly)</strong>
+              <span>Change</span>
+            </div>
             <div className="plan-price">
               <span>$9/mo</span>
             </div>
           </div>
+
+          <div className="line" />
 
           <div className="selected-add-ons">
             <div className="add-ons-item">
@@ -29,12 +33,11 @@ export default function Summary() {
               <span>+$2/mo</span>
             </div>
           </div>
+        </div>
 
-          <div className="total-price">
-            <span>Total(per month)</span>
-            <strong>+$12/mo</strong>
-          </div>
-
+        <div className="total-price">
+          <span>Total(per month)</span>
+          <strong>+$12/mo</strong>
         </div>
 
       </div>
