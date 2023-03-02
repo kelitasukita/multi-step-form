@@ -8,9 +8,9 @@ import Menu from './Menu/Menu';
 
 export default function StepsMenu() {
   return (
-    <div className="container">
-      <PersonalInfo />
 
-    </div>
+    <PersonalInfo />
+
+
   );
 }
