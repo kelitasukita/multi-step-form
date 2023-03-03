@@ -1,5 +1,9 @@
 @import '../../../global.scss';
 
+.box-container {
+  @include box-form-container;
+}
+
 .add-ons-title {
   @include title-style;
   margin-bottom: 30px;
@@ -55,9 +59,10 @@
         display: block;
       }
     }
-
+    
     label {
       cursor: pointer;
+      
       strong {
         font-size: 16px;
         font-weight: 500;
@@ -73,6 +78,7 @@
         color: $grey;
       }
     }
+
 
     span {
       font-size: 14px;
