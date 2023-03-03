@@ -29,7 +29,7 @@ export default function Menu() {
         <MenuItem
           stepNumberBall="3"
           stepNumberTitle="STEP 3"
-          title="ADD_ONS"
+          title="ADD-ONS"
           selected={location.pathname === '/add-ons'}
         />
       </Link>
