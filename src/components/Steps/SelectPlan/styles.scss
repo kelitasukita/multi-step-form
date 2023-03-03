@@ -25,24 +25,30 @@
   margin-left: 16px;
 }
 
-label {
-  p {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18px;
-    color: $denin;
-    margin-top: 39px;
-    margin-left: 16px;
+.option-plans{
+  label {
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $denin;
+      margin-top: 39px;
+      margin-left: 16px;
+    }
+  
+    span {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 30px;
+      color: $grey;
+      margin-left: 16px;
+  
+    }
   }
+}
 
-  span {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 30px;
-    color: $grey;
-    margin-left: 16px;
-
-  }
+.box-container {
+  @include box-form-container;
 }
 
 .plan-container {
