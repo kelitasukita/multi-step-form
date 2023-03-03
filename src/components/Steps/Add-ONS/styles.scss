@@ -26,6 +26,15 @@
     justify-content: space-between;
     padding: 16px;
 
+    &:hover {
+      border-color: $purple;
+    }
+
+    &.selected {
+      background: $very-light-grey;
+      border-color: $purple;
+    }
+
     .checkmark {
       display: flex;
       align-items: center;
@@ -112,25 +121,26 @@
         transition: .2s;
       }
     }
-  }
-  
-  
-  
-  button {
-    width: 123px;
-    height: 48px;
-    background: $denin;
-    border-radius: 8px;
-    border: none;
+
+    button {
+      width: 123px;
+      height: 48px;
+      background: $denin;
+      border-radius: 8px;
+      border: none;
+      
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $white;
     
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18px;
-    color: $white;
-  
-    float: right;
-  
-    cursor: pointer;
-  
+      float: right;
+    
+      cursor: pointer;
+    
+    }
   }
+  
+  
+  
   }
