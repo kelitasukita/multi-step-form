@@ -1,7 +1,7 @@
 import Menu from '../../Menu/Menu';
 import './styles.scss';
 
-export default function SelectPlan() {
+export default function SelectPlan(props: any) {
   return (
     <div className="box-container">
       <Menu />
@@ -17,9 +17,10 @@ export default function SelectPlan() {
             <div className="arcade-plan">
               <label htmlFor="arcade">
                 <svg />
-                <div className="plan-price">
+                <div className="price-period">
                   <p>Arcade</p>
                   <span>$9/mo</span>
+                  <strong>2 months free</strong>
                 </div>
               </label>
             </div>

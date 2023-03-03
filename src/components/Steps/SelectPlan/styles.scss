@@ -12,7 +12,7 @@
     border: 1px solid $purple;
   }
 
-  &:active {
+  &.selected {
     border: 1px solid $purple;
     background: $very-light-grey;
   }
@@ -25,7 +25,23 @@
   margin-left: 16px;
 }
 
-.option-plans{
+.box-container {
+  @include box-form-container;
+}
+
+.plan-container {
+  .plan-title {
+    @include title-style;
+    margin-bottom: 30px;
+  }
+
+.option-plans {
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+
   label {
     p {
       font-size: 16px;
@@ -42,44 +58,8 @@
       line-height: 30px;
       color: $grey;
       margin-left: 16px;
-  
     }
   }
-}
-
-.box-container {
-  @include box-form-container;
-}
-
-.plan-container {
-width: 450px;
-height: 372px;
-
-.plan-title {
-  @include title-style;
-  margin-bottom: 30px;
-
-  h1 {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 37px;
-    color: $denin;
-  }
-  
-  p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 40px;
-    color: $grey;
-  }
-}
-
-.option-plans {
-  width: 450px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 32px;
 
   .arcade-plan {
     svg {
@@ -88,6 +68,10 @@ height: 372px;
     }
 
     @include plan-boxes;
+
+    strong {
+      display: none;
+    }
   }
   
   .advanced-plan {
@@ -195,7 +179,6 @@ height: 372px;
       
     }
     
-    /* Rounded sliders */
     .slider.round {
       border-radius: 34px;
       height:20px;
@@ -206,9 +189,6 @@ height: 372px;
       
     }
   }
-  
-  
-
 }
 
 .back-next {
