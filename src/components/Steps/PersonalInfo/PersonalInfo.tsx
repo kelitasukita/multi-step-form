@@ -13,14 +13,18 @@ export default function personalInfo() {
           </div>
 
           <div className="label-box">
-            <label htmlFor="text">Name</label>
-            <span className="error-message">This field is required</span>
+            <div className="form-label">
+              <label htmlFor="text">Name</label>
+              <span className="error-message">This field is required</span>
+            </div>
             <input type="text" placeholder='e.g. Stephen King' />
           </div>
 
           <div className="label-box">
-            <label htmlFor="email">Email Address</label>
-            <span className="error-message">This field is required</span>
+            <div className="form-label">
+              <label htmlFor="email">Email Address</label>
+              <span className="error-message">This field is required</span>
+            </div>
             <input type="email" placeholder='e.g. stephenking@lorem.com' />
           </div>
 
