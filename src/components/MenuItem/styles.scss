@@ -17,7 +17,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
 
     p {
       color: $white ;
@@ -26,7 +25,7 @@
       line-height: 16px;
     }
 
-    &:active {
+    &:hover {
       background: $sky-blue;
 
       p {
@@ -34,21 +33,31 @@
       }
     }
 
-
     &.selected {
       background: $sky-blue;
-
+      
       p {
         color: $denin;
       }
     }
     
   }
-
+  
   .step1 {
     width: 120px;
     height: 33px;
     margin-left: 16px;
+
+    
+    
+    // &:hover ~ .step-ball {
+    //   background: $sky-blue;
+  
+    //   p {
+    //     color: $denin;
+    //   }
+    // } 
+    
 
     p {
       font-size: 12px;
@@ -64,5 +73,6 @@
       letter-spacing: 1px;
       color: $white;
     }
+
   }
 }
