@@ -12,19 +12,24 @@ export default function personalInfo() {
             <p>Please provide your name, email address, and phone number.</p>
           </div>
 
-          <div className="name-box">
-            <label htmlFor="name">Name</label>
+          <div className="label-box">
+            <label htmlFor="text">Name</label>
+            <span className="error-message">This field is required</span>
             <input type="text" placeholder='e.g. Stephen King' />
           </div>
 
-          <div className="email-box">
-            <label htmlFor="name">Email Address</label>
-            <input type="text" placeholder='e.g. stephenking@lorem.com' />
+          <div className="label-box">
+            <label htmlFor="email">Email Address</label>
+            <span className="error-message">This field is required</span>
+            <input type="email" placeholder='e.g. stephenking@lorem.com' />
           </div>
 
-          <div className="phone-box">
-            <label htmlFor="name">Phone Number</label>
-            <input type="text" placeholder='e.g. +1 234567 890' />
+          <div className="label-box error">
+            <div className="form-label">
+              <label htmlFor="tel">Phone Number</label>
+              <span className="error-message">This field is required</span>
+            </div>
+            <input type="tel" placeholder='e.g. +1 234567 890' />
           </div>
 
           <button type="submit">Next Step</button>

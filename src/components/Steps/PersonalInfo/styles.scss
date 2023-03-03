@@ -35,12 +35,35 @@
 
 .personalInfo-container {
 
+  .error-message {
+    display: none;
+  }
+
+  .form-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .error {
+    input {
+      border: 1px solid $red-errors !important;
+    }
+    .error-message {
+      display: inline;
+      color: $red-errors;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+    }
+  }
+
   .title-info {
    @include title-style;
    margin-bottom: 40px;
   }
 
-  .name-box {
+  .label-box {
     @include form-box;
 
     label {
@@ -50,29 +73,6 @@
     input {
       @include form-input;
 
-    }
-  }
-  .email-box {
-    @include form-box;
-
-    label {
-      @include form-label;
-    }
-
-    input {
-      @include form-input;
-
-    }
-  }
-  .phone-box {
-    @include form-box;
-
-    label {
-      @include form-label;
-    }
-
-    input {
-      @include form-input;
     }
   }
 
