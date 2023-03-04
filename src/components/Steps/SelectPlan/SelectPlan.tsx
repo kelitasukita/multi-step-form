@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Menu from '../../Menu/Menu';
 import './styles.scss';
 
@@ -99,7 +101,9 @@ export default function SelectPlan() {
           </div>
 
           <div className="back-next">
-            <span>Go back</span>
+            <Link to="/">
+              <span>Go back</span>
+            </Link>
             <button type="submit">Next Step</button>
           </div>
         </div>
