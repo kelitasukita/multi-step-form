@@ -6,6 +6,7 @@ import PersonalInfo from "../Steps/PersonalInfo/PersonalInfo";
 import SelectPlan from "../Steps/SelectPlan/SelectPlan";
 import AddOns from "../Steps/Add-ONS/Add-ons";
 import Summary from "../Steps/Summary/Summary";
+import Thanks from "../Steps/Thanks/Thanks";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/summary",
     element: <Summary />
+  },
+  {
+    path: "/ordered",
+    element: <Thanks />
   }
 ])
 
