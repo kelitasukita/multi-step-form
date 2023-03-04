@@ -1,0 +1,38 @@
+@import '../../../global.scss';
+
+.box-container {
+  @include  box-form-container;
+}
+
+.thanks-box {
+  width: 450px;
+  height: 238px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 125px;
+
+  svg {
+    background: url(../../../assets/icons/icon-thank-you.svg) no-repeat;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 32px;
+  }
+
+  span {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37px;
+    color: $denin;
+    margin-bottom: 14px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: $grey;
+    text-align: center;
+  }
+}
