@@ -1,10 +1,27 @@
 @import '../../../global.scss';
 
 @mixin plan-boxes {
-  width: 138px;
   height: 160px;
+  width: 138px;
   border: 1px solid $border-color;
   border-radius: 8px;
+
+  &.yearly {
+    height: 183px;
+
+    .plan-price {
+      display: flex;
+      flex-direction: column;
+      
+      strong {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        color: $denin;
+        margin-left: 16px;
+      }
+    }
+  }
 
   cursor: pointer;
 
@@ -69,9 +86,6 @@
 
     @include plan-boxes;
 
-    strong {
-      display: none;
-    }
   }
   
   .advanced-plan {
@@ -112,7 +126,7 @@
     font-weight: 700;
     cursor: pointer;
 
-    &:active {
+    &.selected {
       color: $denin;
     }
   }
