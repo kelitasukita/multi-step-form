@@ -137,6 +137,10 @@
       float: right;
     
       cursor: pointer;
+
+      &:hover {
+        background: $next-btn-hover;
+      }
     
     }
   }
