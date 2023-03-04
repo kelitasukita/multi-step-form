@@ -73,6 +73,10 @@
     input {
       @include form-input;
 
+      &:hover, &:focus {
+        border-color: $purple;
+      }
+      
     }
   }
 

@@ -1,7 +1,7 @@
 import Menu from '../../Menu/Menu';
 import './styles.scss';
 
-export default function SelectPlan(props: any) {
+export default function SelectPlan() {
   return (
     <div className="box-container">
       <Menu />
