@@ -1,10 +1,17 @@
 @import '../../../global.scss';
 
 @mixin plan-boxes {
+  position: relative;
   width: 138px;
   height: 160px;
   border: 1px solid $border-color;
   border-radius: 8px;
+  display: block;
+  cursor: pointer;
+  label {
+    position: absolute;
+    z-index: -1;
+  }
 
   &.yearly {
     height: 183px;
@@ -23,8 +30,6 @@
     }
   }
 
-  cursor: pointer;
-
   &:hover {
     border: 1px solid $purple;
   }
@@ -32,6 +37,7 @@
   &.selected {
     border: 1px solid $purple;
     background: $very-light-grey;
+    z-index: -1;
   }
 }
 
@@ -130,7 +136,7 @@
     font-weight: 700;
     cursor: pointer;
 
-    &.selected {
+    &.selected-period {
       color: $denin;
     }
   }

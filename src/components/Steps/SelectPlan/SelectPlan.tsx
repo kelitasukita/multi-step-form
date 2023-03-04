@@ -5,6 +5,7 @@ import './styles.scss';
 export default function SelectPlan() {
 
   const [yearly, setYearly] = useState(false);
+  const [plan, setPlan] = useState('');
 
   const handlePlanPeriod = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { checked } = event.target;
@@ -24,7 +25,10 @@ export default function SelectPlan() {
           </div>
 
           <div className="option-plans">
-            <div className={"arcade-plan " + (yearly ? 'yearly' : '')}>
+            <div className={"arcade-plan "
+              + (yearly ? ' yearly ' : '')
+              + (plan == 'arcade' ? ' selected ' : '')}
+              onClick={() => setPlan('arcade')}>
               <label htmlFor="arcade">
                 <svg />
                 <div className="plan-price">
@@ -42,7 +46,10 @@ export default function SelectPlan() {
               </label>
             </div>
 
-            <div className={"advanced-plan " + (yearly ? 'yearly' : '')}>
+            <div className={"advanced-plan "
+              + (yearly ? 'yearly' : '')
+              + (plan == 'advanced' ? ' selected ' : '')}
+              onClick={() => setPlan('advanced')}>
               <label htmlFor="advanced">
                 <svg />
                 <div className="plan-price">
@@ -59,7 +66,10 @@ export default function SelectPlan() {
               </label>
             </div>
 
-            <div className={"pro-plan " + (yearly ? 'yearly' : '')}>
+            <div className={"pro-plan "
+              + (yearly ? 'yearly' : '')
+              + (plan == 'pro' ? ' selected ' : '')}
+              onClick={() => setPlan('pro')}>
               <label htmlFor="pro">
                 <svg />
                 <div className="plan-price">
@@ -79,12 +89,12 @@ export default function SelectPlan() {
 
           <div className={"month-year " + (yearly ? 'yearly' : '')}>
             <div className="better-together">
-              <span className={!yearly ? 'selected' : ''}>Monthly</span>
+              <span className={!yearly ? 'selected-period' : ''}>Monthly</span>
               <label className="switch">
                 <input type="checkbox" name='yearly' onChange={handlePlanPeriod} />
                 <strong className="slider round" />
               </label>
-              <span className={yearly ? 'selected' : ''}>Yearly</span>
+              <span className={yearly ? 'selected-period' : ''}>Yearly</span>
             </div>
           </div>
 
