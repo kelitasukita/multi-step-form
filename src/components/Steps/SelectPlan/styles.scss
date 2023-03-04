@@ -1,8 +1,8 @@
 @import '../../../global.scss';
 
 @mixin plan-boxes {
-  height: 160px;
   width: 138px;
+  height: 160px;
   border: 1px solid $border-color;
   border-radius: 8px;
 
@@ -12,7 +12,7 @@
     .plan-price {
       display: flex;
       flex-direction: column;
-      
+
       strong {
         font-size: 12px;
         font-weight: 400;
@@ -118,6 +118,10 @@
 
   margin-bottom: 116px;
   border-radius: 8px;
+
+  &.yearly {
+    margin-bottom: 93px;
+  }
 
   span {
     color: $grey;

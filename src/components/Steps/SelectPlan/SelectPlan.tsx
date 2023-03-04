@@ -77,7 +77,7 @@ export default function SelectPlan() {
             </div>
           </div>
 
-          <div className="month-year">
+          <div className={"month-year " + (yearly ? 'yearly' : '')}>
             <div className="better-together">
               <span className={!yearly ? 'selected' : ''}>Monthly</span>
               <label className="switch">
