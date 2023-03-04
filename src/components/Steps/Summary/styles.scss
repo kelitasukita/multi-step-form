@@ -38,6 +38,12 @@
       line-height: 30px;
       color: $grey;
       text-decoration-line: underline;
+
+      cursor: pointer;
+      
+      &:hover {
+        color: $purple;
+      }
     }
 
     .plan-price {
@@ -148,5 +154,9 @@ button {
   float: right;
 
   cursor: pointer;
+
+  &:hover {
+    background: $confirm-hover;
+  }
 
 }
