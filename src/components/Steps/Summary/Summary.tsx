@@ -46,7 +46,7 @@ export default function Summary() {
 
           </div>
 
-          <div className="back-next">
+          <div className="back-next summary-btn">
             <span>Go back</span>
             <button type="submit">Confirm</button>
           </div>
