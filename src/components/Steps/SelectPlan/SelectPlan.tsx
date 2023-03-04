@@ -1,7 +1,17 @@
+import { useState } from 'react';
 import Menu from '../../Menu/Menu';
 import './styles.scss';
 
 export default function SelectPlan() {
+
+  const [yearly, setYearly] = useState(false);
+
+  const handlePlanPeriod = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { checked } = event.target;
+
+    setYearly(checked);
+  }
+
   return (
     <div className="box-container">
       <Menu />
@@ -14,33 +24,54 @@ export default function SelectPlan() {
           </div>
 
           <div className="option-plans">
-            <div className="arcade-plan">
+            <div className={"arcade-plan " + (yearly ? 'yearly' : '')}>
               <label htmlFor="arcade">
                 <svg />
-                <div className="price-period">
+                <div className="plan-price">
                   <p>Arcade</p>
-                  <span>$9/mo</span>
-                  <strong>2 months free</strong>
+                  {yearly ?
+                    <>
+                      <span>$90/yr</span>
+                      <strong>2 months free</strong>
+                    </>
+                    :
+                    <span>$9/mo</span>
+                  }
+
                 </div>
               </label>
             </div>
 
-            <div className="advanced-plan">
+            <div className={"advanced-plan " + (yearly ? 'yearly' : '')}>
               <label htmlFor="advanced">
                 <svg />
                 <div className="plan-price">
                   <p>Advanced</p>
-                  <span>$12/mo</span>
+                  {yearly ?
+                    <>
+                      <span>$120/yr</span>
+                      <strong>2 months free</strong>
+                    </>
+                    :
+                    <span>$12/mo</span>
+                  }
                 </div>
               </label>
             </div>
 
-            <div className="pro-plan">
+            <div className={"pro-plan " + (yearly ? 'yearly' : '')}>
               <label htmlFor="pro">
                 <svg />
                 <div className="plan-price">
                   <p>Pro</p>
-                  <span>$15/mo</span>
+                  {yearly ?
+                    <>
+                      <span>$150/yr</span>
+                      <strong>2 months free</strong>
+                    </>
+                    :
+                    <span>$15/mo</span>
+                  }
                 </div>
               </label>
             </div>
@@ -48,12 +79,12 @@ export default function SelectPlan() {
 
           <div className="month-year">
             <div className="better-together">
-              <span>Monthly</span>
+              <span className={!yearly ? 'selected' : ''}>Monthly</span>
               <label className="switch">
-                <input type="checkbox" />
+                <input type="checkbox" name='yearly' onChange={handlePlanPeriod} />
                 <strong className="slider round" />
               </label>
-              <span>Yearly</span>
+              <span className={yearly ? 'selected' : ''}>Yearly</span>
             </div>
           </div>
 
