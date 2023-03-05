@@ -7,13 +7,17 @@ import './styles.scss';
 export default function SelectPlan() {
 
   const [yearly, setYearly] = useState(false);
-  const [plan, setPlan] = useState('');
+  const [plan, setPlan] = useState('arcade');
+
+  const navigate = useNavigate();
 
   const handlePlanPeriod = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { checked } = event.target;
 
     setYearly(checked);
   }
+
+  const handleButtonClick = () => { navigate('/add-ons') };
 
   return (
     <div className="box-container">
@@ -104,7 +108,7 @@ export default function SelectPlan() {
             <Link to="/">
               <span>Go back</span>
             </Link>
-            <button type="submit">Next Step</button>
+            <button type="submit" onClick={handleButtonClick}>Next Step</button>
           </div>
         </div>
       </div>
