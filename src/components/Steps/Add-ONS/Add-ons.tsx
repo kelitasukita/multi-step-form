@@ -1,8 +1,30 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Menu from '../../Menu/Menu';
 import './styles.scss';
 
 export default function AddOns() {
+
+  const [addOns, setAddOns] = useState({
+    online: false,
+    larger: false,
+    customizable: false,
+  });
+
+  const handleClickCheckbox = (addOn: string) => {
+
+
+    let newValue = false;
+
+    switch (addOn) {
+      case 'online': newValue = !addOns.online; break;
+      case 'larger': newValue = !addOns.larger; break;
+      case 'customizable': newValue = !addOns.customizable; break;
+    }
+
+    setAddOns({ ...addOns, [addOn]: newValue });
+  }
+
   return (
     <div className="box-container">
       <Menu />
@@ -16,10 +38,10 @@ export default function AddOns() {
           </div>
 
           <div className="add-ons-options">
-            <div className="option">
+            <div className="option" onClick={() => handleClickCheckbox('online')}>
               <div className="checkmark">
-                <input className='check' type="checkbox" />
-                <label className='check-label' htmlFor="check">
+                <input className='check' type="checkbox" name='add-ons' value='online' checked={addOns.online} />
+                <label htmlFor="check">
                   {/* <div className="description"> */}
                   <strong>Online Service</strong>
                   <p>Access to multiplayer games</p>
@@ -31,9 +53,9 @@ export default function AddOns() {
               </div>
             </div>
 
-            <div className="option">
+            <div className="option" onClick={() => handleClickCheckbox('larger')}>
               <div className="checkmark">
-                <input className='check' type="checkbox" />
+                <input className='check' type="checkbox" name='add-ons' value='larger' checked={addOns.larger} />
                 <label htmlFor="check">
                   <div className="description">
                     <strong>Larger storage</strong>
@@ -46,9 +68,9 @@ export default function AddOns() {
               </div>
             </div>
 
-            <div className="option">
+            <div className="option" onClick={() => handleClickCheckbox('customizable')}>
               <div className="checkmark">
-                <input className='check' type="checkbox" />
+                <input className='check' type="checkbox" name='add-ons' value='customizable' checked={addOns.customizable} />
                 <label htmlFor="check">
                   <div className="description">
                     <strong>Customizable profile</strong>
