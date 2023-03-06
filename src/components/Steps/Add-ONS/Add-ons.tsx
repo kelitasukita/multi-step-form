@@ -7,11 +7,15 @@ export default function AddOns() {
 
   const planPeriod = localStorage.getItem('planPeriod');
 
-  const [addOns, setAddOns] = useState({
-    online: false,
-    larger: false,
-    customizable: false,
-  });
+  const selectedAddOns = localStorage.getItem('selectedAddOns');
+
+  const [addOns, setAddOns] = useState(
+    selectedAddOns ? JSON.parse(selectedAddOns) : {
+      online: false,
+      larger: false,
+      customizable: false,
+    }
+  );
 
   const navigate = useNavigate();
 
@@ -25,7 +29,10 @@ export default function AddOns() {
       case 'customizable': newValue = !addOns.customizable; break;
     }
 
-    setAddOns({ ...addOns, [addOn]: newValue });
+    const newAddOnState = { ...addOns, [addOn]: newValue };
+
+    setAddOns(newAddOnState);
+    localStorage.setItem('selectedAddOns', JSON.stringify(newAddOnState));
   }
 
   return (
