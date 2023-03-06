@@ -7,7 +7,7 @@ import './styles.scss';
 export default function SelectPlan() {
 
   const [yearly, setYearly] = useState(false);
-  const [plan, setPlan] = useState('arcade');
+  const [plan, setPlan] = useState(localStorage.getItem('selectedPlan') ?? 'arcade');
 
   const navigate = useNavigate();
 
@@ -15,9 +15,16 @@ export default function SelectPlan() {
     const { checked } = event.target;
 
     setYearly(checked);
+    localStorage.setItem('planPeriod', checked ? 'yearly' : 'monthly');
   }
 
   const handleButtonClick = () => { navigate('/add-ons') };
+
+  const handlePlan = (plan: string) => {
+    setPlan(plan);
+
+    localStorage.setItem('selectedPlan', plan);
+  }
 
   return (
     <div className="box-container">
@@ -34,7 +41,7 @@ export default function SelectPlan() {
             <div className={"arcade-plan "
               + (yearly ? ' yearly ' : '')
               + (plan == 'arcade' ? ' selected ' : '')}
-              onClick={() => setPlan('arcade')}>
+              onClick={() => handlePlan('arcade')}>
               <label htmlFor="arcade">
                 <svg />
                 <div className="plan-price">
@@ -55,7 +62,7 @@ export default function SelectPlan() {
             <div className={"advanced-plan "
               + (yearly ? 'yearly' : '')
               + (plan == 'advanced' ? ' selected ' : '')}
-              onClick={() => setPlan('advanced')}>
+              onClick={() => handlePlan('advanced')}>
               <label htmlFor="advanced">
                 <svg />
                 <div className="plan-price">
@@ -75,7 +82,7 @@ export default function SelectPlan() {
             <div className={"pro-plan "
               + (yearly ? 'yearly' : '')
               + (plan == 'pro' ? ' selected ' : '')}
-              onClick={() => setPlan('pro')}>
+              onClick={() => handlePlan('pro')}>
               <label htmlFor="pro">
                 <svg />
                 <div className="plan-price">
