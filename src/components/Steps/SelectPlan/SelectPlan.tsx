@@ -19,8 +19,6 @@ export default function SelectPlan() {
 
   }
 
-  const handleButtonClick = () => { navigate('/add-ons') };
-
   const handlePlan = (plan: string) => {
     setPlan(plan);
 
@@ -116,7 +114,7 @@ export default function SelectPlan() {
             <Link to="/">
               <span>Go back</span>
             </Link>
-            <button type="submit" onClick={handleButtonClick}>Next Step</button>
+            <button type="submit" onClick={() => { navigate('/add-ons') }}>Next Step</button>
           </div>
         </div>
       </div>
