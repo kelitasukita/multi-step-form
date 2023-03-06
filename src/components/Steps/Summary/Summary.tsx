@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Menu from '../../Menu/Menu';
 import './styles.scss';
 
@@ -47,7 +48,9 @@ export default function Summary() {
           </div>
 
           <div className="back-next summary-btn">
-            <span>Go back</span>
+            <Link to="/add-ons">
+              <span>Go back</span>
+            </Link>
             <button type="submit">Confirm</button>
           </div>
 
