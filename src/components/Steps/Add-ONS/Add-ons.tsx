@@ -5,6 +5,8 @@ import './styles.scss';
 
 export default function AddOns() {
 
+  const planPeriod = localStorage.getItem('planPeriod');
+
   const [addOns, setAddOns] = useState({
     online: false,
     larger: false,
@@ -12,7 +14,6 @@ export default function AddOns() {
   });
 
   const handleClickCheckbox = (addOn: string) => {
-
 
     let newValue = false;
 
@@ -49,7 +50,11 @@ export default function AddOns() {
                 </label>
               </div>
               <div className="price">
-                <span>+$1/mo</span>
+                {planPeriod == 'monthly' ?
+                  <span>+$1/mo</span>
+                  :
+                  <span>+$10/yr</span>
+                }
               </div>
             </div>
 
@@ -64,7 +69,11 @@ export default function AddOns() {
                 </label>
               </div>
               <div className="price">
-                <span>+$2/mo</span>
+                {planPeriod == 'monthly' ?
+                  <span>+$2/mo</span>
+                  :
+                  <span>+$20/yr</span>
+                }
               </div>
             </div>
 
@@ -79,7 +88,11 @@ export default function AddOns() {
                 </label>
               </div>
               <div className="price">
-                <span>+$2/mo</span>
+                {planPeriod == 'monthly' ?
+                  <span>+$2/mo</span>
+                  :
+                  <span>+$20/yr</span>
+                }
               </div>
             </div>
 
