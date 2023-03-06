@@ -6,7 +6,7 @@ import './styles.scss';
 
 export default function SelectPlan() {
 
-  const [yearly, setYearly] = useState(false);
+  const [yearly, setYearly] = useState(localStorage.getItem('planPeriod') == 'yearly');
   const [plan, setPlan] = useState(localStorage.getItem('selectedPlan') ?? 'arcade');
 
   const navigate = useNavigate();
@@ -16,6 +16,7 @@ export default function SelectPlan() {
 
     setYearly(checked);
     localStorage.setItem('planPeriod', checked ? 'yearly' : 'monthly');
+
   }
 
   const handleButtonClick = () => { navigate('/add-ons') };
@@ -104,7 +105,7 @@ export default function SelectPlan() {
             <div className="better-together">
               <span className={!yearly ? 'selected-period' : ''}>Monthly</span>
               <label className="switch">
-                <input type="checkbox" name='yearly' onChange={handlePlanPeriod} />
+                <input type="checkbox" name='yearly' onChange={handlePlanPeriod} checked={yearly} />
                 <strong className="slider round" />
               </label>
               <span className={yearly ? 'selected-period' : ''}>Yearly</span>
