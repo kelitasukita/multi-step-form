@@ -3,6 +3,19 @@ import Menu from '../../Menu/Menu';
 import './styles.scss';
 
 export default function Summary() {
+
+  const formPlan = JSON.parse(localStorage.getItem('formPlan') ?? '{}');
+
+  console.log(formPlan);
+
+  const selectedPlan = localStorage.getItem('selectedPlan') ?? 'arcade';
+
+  const planPeriod = localStorage.getItem('planPeriod') ?? 'yearly';
+
+  const selectedAddOns = localStorage.getItem('selectedAddOns');
+
+  console.log(selectedPlan);
+
   return (
     <div className="box-container">
       <Menu />
@@ -17,11 +30,17 @@ export default function Summary() {
             <div className="selected-products">
               <div className="selected-plan">
                 <div className="description-plan">
-                  <strong>Arcade (Monthly)</strong>
+                  <strong>
+                    {`${selectedPlan?.charAt(0).toUpperCase() + selectedPlan.slice(1)} 
+                    (${planPeriod.charAt(0).toUpperCase() + planPeriod.slice(1)})`}
+                  </strong>
                   <span>Change</span>
                 </div>
                 <div className="plan-price">
-                  <span>$9/mo</span>
+                  <span>
+                    ${formPlan[planPeriod].plans[selectedPlan]}
+                    {planPeriod === 'yearly' ? '/yr' : ''}
+                  </span>
                 </div>
               </div>
 
