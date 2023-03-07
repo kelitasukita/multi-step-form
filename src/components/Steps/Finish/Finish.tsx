@@ -1,9 +1,26 @@
 import './styles.scss';
 
 import Menu from "../../Menu/Menu";
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 export default function Thanks() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+
+    if (localStorage.getItem('refresh')) {
+
+      localStorage.removeItem('refresh');
+      navigate('/');
+
+    } else {
+      localStorage.setItem('refresh', 'refresh');
+    }
+
+  }, [])
+
   return (
     <div className="box-container">
       <Menu />

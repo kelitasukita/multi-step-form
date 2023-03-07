@@ -4,6 +4,8 @@ import './styles.scss';
 
 export default function Summary() {
 
+  const navigate = useNavigate();
+
   const formPlan = JSON.parse(localStorage.getItem('formPlan') ?? '{}');
 
   const selectedPlan = localStorage.getItem('selectedPlan') ?? 'arcade';
@@ -27,6 +29,7 @@ export default function Summary() {
     return planCosts + addOnCosts;
   }
 
+
   const handleClickCleanStorage = () => {
     localStorage.removeItem('personalInfo');
     localStorage.removeItem('selectedAddOns');
@@ -34,10 +37,8 @@ export default function Summary() {
     localStorage.removeItem('selectedPlan');
     localStorage.removeItem('formPlan');
 
+    navigate('/ordered')
   }
-
-  const navigate = useNavigate();
-  const handleCallNextPage = () => { navigate('/ordered') };
 
   return (
     <div className="box-container">
@@ -78,8 +79,8 @@ export default function Summary() {
                       Object.entries(formPlan.addOns)
                         .map(([key, label]) => (
                           selectedAddOns[key] == true ?
-                            <div className="add-ons-item">
-                              <strong>{label}</strong>
+                            <div className="add-ons-item" key={key}>
+                              <strong>{label + ''}</strong>
                               <span>
                                 +${formPlan[planPeriod].addOns[key]}
                                 {yearlyOrMonth()}
@@ -104,7 +105,7 @@ export default function Summary() {
             <Link to="/add-ons">
               <span>Go back</span>
             </Link>
-            <button type="submit" onClick={() => { handleClickCleanStorage(); handleCallNextPage(); }}>Confirm</button>
+            <button type="submit" onClick={handleClickCleanStorage}>Confirm</button>
           </div>
 
         </div>

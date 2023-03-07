@@ -6,6 +6,11 @@ import './styles.scss';
 
 export default function SelectPlan() {
 
+  if (!localStorage.getItem('planPeriod') || !localStorage.getItem('selectedPlan')) {
+    localStorage.setItem('planPeriod', 'monthly');
+    localStorage.setItem('selectedPlan', 'arcade');
+  }
+
   const [yearly, setYearly] = useState(localStorage.getItem('planPeriod') == 'yearly');
   const [plan, setPlan] = useState(localStorage.getItem('selectedPlan') ?? 'arcade');
 
