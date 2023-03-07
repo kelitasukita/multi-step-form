@@ -34,12 +34,14 @@ export default function Summary() {
                     {`${selectedPlan?.charAt(0).toUpperCase() + selectedPlan.slice(1)} 
                     (${planPeriod.charAt(0).toUpperCase() + planPeriod.slice(1)})`}
                   </strong>
-                  <span>Change</span>
+                  <Link to="/select-plan">
+                    <span>Change</span>
+                  </Link>
                 </div>
                 <div className="plan-price">
                   <span>
                     ${formPlan[planPeriod].plans[selectedPlan]}
-                    {planPeriod === 'yearly' ? '/yr' : ''}
+                    {planPeriod === 'yearly' ? '/yr' : '/mo'}
                   </span>
                 </div>
               </div>
