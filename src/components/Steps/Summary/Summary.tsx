@@ -12,6 +12,21 @@ export default function Summary() {
 
   const selectedAddOns = JSON.parse(localStorage.getItem('selectedAddOns') ?? '{}');
 
+  const yearlyOrMonth = () => {
+    return planPeriod == 'yearly' ? '/yr' : '/mo'
+  }
+
+  const total = () => {
+    const onlineCosts = selectedAddOns.online ? formPlan[planPeriod].addOns.online : 0;
+    const largerCosts = selectedAddOns.larger ? formPlan[planPeriod].addOns.larger : 0;
+    const customizableCosts = selectedAddOns.customizable ? formPlan[planPeriod].addOns.customizable : 0;
+
+    const addOnCosts = onlineCosts + largerCosts + customizableCosts;
+    const planCosts = formPlan[planPeriod].plans[selectedPlan];
+
+    return planCosts + addOnCosts;
+  }
+
   return (
     <div className="box-container">
       <Menu />
@@ -37,7 +52,7 @@ export default function Summary() {
                 <div className="plan-price">
                   <span>
                     ${formPlan[planPeriod].plans[selectedPlan]}
-                    {planPeriod === 'yearly' ? '/yr' : '/mo'}
+                    {yearlyOrMonth()}
                   </span>
                 </div>
               </div>
@@ -54,8 +69,8 @@ export default function Summary() {
                             <div className="add-ons-item">
                               <strong>{label}</strong>
                               <span>
-                                ${formPlan[planPeriod].addOns[key]}
-                                {planPeriod == 'yearly' ? '/yr' : '/mo'}
+                                +${formPlan[planPeriod].addOns[key]}
+                                {yearlyOrMonth()}
                               </span>
                             </div> :
                             ''
@@ -67,8 +82,8 @@ export default function Summary() {
             </div>
 
             <div className="total-price">
-              <span>Total(per month)</span>
-              <strong>+$12/mo</strong>
+              <span>Total({planPeriod === 'yearly' ? 'per year' : 'per month'})</span>
+              <strong>${total()}{yearlyOrMonth()}</strong>
             </div>
 
           </div>
