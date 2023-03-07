@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Menu from '../../Menu/Menu';
 import './styles.scss';
 
@@ -25,6 +25,18 @@ export default function Summary() {
     const planCosts = formPlan[planPeriod].plans[selectedPlan];
 
     return planCosts + addOnCosts;
+  }
+
+  const navigate = useNavigate();
+
+  const handleClickCleanStorage = () => {
+
+    localStorage.removeItem('personalInfo');
+    localStorage.removeItem('selectedAddOns');
+    localStorage.removeItem('planPeriod');
+    localStorage.removeItem('selectedPlan');
+    localStorage.removeItem('formPlan');
+
   }
 
   return (
@@ -92,7 +104,7 @@ export default function Summary() {
             <Link to="/add-ons">
               <span>Go back</span>
             </Link>
-            <button type="submit">Confirm</button>
+            <button type="submit" onClick={handleClickCleanStorage}>Confirm</button>
           </div>
 
         </div>
