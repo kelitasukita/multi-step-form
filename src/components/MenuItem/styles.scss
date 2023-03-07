@@ -6,8 +6,6 @@
   display: flex;
   margin-left: 32px;
   margin-bottom: 32px;
-
-  cursor: pointer;
   
   .step-ball {
     width: 33px;
@@ -25,14 +23,6 @@
       line-height: 16px;
     }
 
-    &:hover {
-      background: $sky-blue;
-
-      p {
-        color: $denin;
-      }
-    }
-
     &.selected {
       background: $sky-blue;
       
@@ -47,17 +37,6 @@
     width: 120px;
     height: 33px;
     margin-left: 16px;
-
-    
-    
-    // &:hover ~ .step-ball {
-    //   background: $sky-blue;
-  
-    //   p {
-    //     color: $denin;
-    //   }
-    // } 
-    
 
     p {
       font-size: 12px;

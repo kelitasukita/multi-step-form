@@ -7,41 +7,34 @@ export default function Menu() {
   const location = useLocation();
   return (
     <div className="menu-items">
-      <Link to="/">
-        <MenuItem
-          stepNumberBall="1"
-          stepNumberTitle="STEP 1"
-          title="YOUR INFO"
-          selected={location.pathname === '/'}
-        />
-      </Link>
 
-      <Link to="/select-plan">
-        <MenuItem
-          stepNumberBall="2"
-          stepNumberTitle="STEP 2"
-          title="SELECT PLAN"
-          selected={location.pathname === '/select-plan'}
-        />
-      </Link>
+      <MenuItem
+        stepNumberBall="1"
+        stepNumberTitle="STEP 1"
+        title="YOUR INFO"
+        selected={location.pathname === '/'}
+      />
 
-      <Link to="/add-ons">
-        <MenuItem
-          stepNumberBall="3"
-          stepNumberTitle="STEP 3"
-          title="ADD-ONS"
-          selected={location.pathname === '/add-ons'}
-        />
-      </Link>
+      <MenuItem
+        stepNumberBall="2"
+        stepNumberTitle="STEP 2"
+        title="SELECT PLAN"
+        selected={location.pathname === '/select-plan'}
+      />
 
-      <Link to="/summary">
-        <MenuItem
-          stepNumberBall="4"
-          stepNumberTitle="STEP 4"
-          title="SUMMARY"
-          selected={location.pathname === '/summary'}
-        />
-      </Link>
+      <MenuItem
+        stepNumberBall="3"
+        stepNumberTitle="STEP 3"
+        title="ADD-ONS"
+        selected={location.pathname === '/add-ons'}
+      />
+
+      <MenuItem
+        stepNumberBall="4"
+        stepNumberTitle="STEP 4"
+        title="SUMMARY"
+        selected={location.pathname === '/summary'}
+      />
     </div>
   )
 }
