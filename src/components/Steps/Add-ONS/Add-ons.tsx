@@ -50,7 +50,7 @@ export default function AddOns() {
           <div className="add-ons-options">
             <div className="option" onClick={() => handleClickCheckbox('online')}>
               <div className="checkmark">
-                <input className='check' type="checkbox" name='add-ons' value='online' checked={addOns.online} />
+                <input className='check' type="checkbox" name='add-ons' value='online' checked={addOns.online} onChange={() => { }} />
                 <label htmlFor="check">
                   {/* <div className="description"> */}
                   <strong>Online Service</strong>
@@ -69,7 +69,7 @@ export default function AddOns() {
 
             <div className="option" onClick={() => handleClickCheckbox('larger')}>
               <div className="checkmark">
-                <input className='check' type="checkbox" name='add-ons' value='larger' checked={addOns.larger} />
+                <input className='check' type="checkbox" name='add-ons' value='larger' checked={addOns.larger} onChange={() => { }} />
                 <label htmlFor="check">
                   <div className="description">
                     <strong>Larger storage</strong>
@@ -88,7 +88,7 @@ export default function AddOns() {
 
             <div className="option" onClick={() => handleClickCheckbox('customizable')}>
               <div className="checkmark">
-                <input className='check' type="checkbox" name='add-ons' value='customizable' checked={addOns.customizable} />
+                <input className='check' type="checkbox" name='add-ons' value='customizable' checked={addOns.customizable} onChange={() => { }} />
                 <label htmlFor="check">
                   <div className="description">
                     <strong>Customizable profile</strong>
