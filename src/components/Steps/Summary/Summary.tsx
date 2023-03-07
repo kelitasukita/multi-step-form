@@ -6,15 +6,11 @@ export default function Summary() {
 
   const formPlan = JSON.parse(localStorage.getItem('formPlan') ?? '{}');
 
-  console.log(formPlan);
-
   const selectedPlan = localStorage.getItem('selectedPlan') ?? 'arcade';
 
   const planPeriod = localStorage.getItem('planPeriod') ?? 'yearly';
 
-  const selectedAddOns = localStorage.getItem('selectedAddOns');
-
-  console.log(selectedPlan);
+  const selectedAddOns = JSON.parse(localStorage.getItem('selectedAddOns') ?? '{}');
 
   return (
     <div className="box-container">
@@ -49,15 +45,24 @@ export default function Summary() {
               <div className="line" />
 
               <div className="selected-add-ons">
-                <div className="add-ons-item">
-                  <strong>Online service</strong>
-                  <span>+$1/mo</span>
-                </div>
-
-                <div className="add-ons-item">
-                  <strong>Larger storage</strong>
-                  <span>+$2/mo</span>
-                </div>
+                {
+                  <>
+                    {
+                      Object.entries(formPlan.addOns)
+                        .map(([key, label]) => (
+                          selectedAddOns[key] == true ?
+                            <div className="add-ons-item">
+                              <strong>{label}</strong>
+                              <span>
+                                ${formPlan[planPeriod].addOns[key]}
+                                {planPeriod == 'yearly' ? '/yr' : '/mo'}
+                              </span>
+                            </div> :
+                            ''
+                        ))
+                    }
+                  </>
+                }
               </div>
             </div>
 
@@ -76,7 +81,7 @@ export default function Summary() {
           </div>
 
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }
