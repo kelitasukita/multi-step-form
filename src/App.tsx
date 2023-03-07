@@ -4,6 +4,11 @@ import router from "./components/routes/Routes";
 function App() {
 
   const formPlan = {
+    addOns: {
+      online: 'Online service',
+      larger: 'Larger storage',
+      customizable: 'Customizable profile'
+    },
     monthly: {
       plans: {
         arcade: 9,
