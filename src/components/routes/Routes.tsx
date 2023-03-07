@@ -6,7 +6,7 @@ import PersonalInfo from "../Steps/PersonalInfo/PersonalInfo";
 import SelectPlan from "../Steps/SelectPlan/SelectPlan";
 import AddOns from "../Steps/Add-ONS/Add-ons";
 import Summary from "../Steps/Summary/Summary";
-import Thanks from "../Steps/Thanks/Thanks";
+import Finish from "../Steps/Finish/Finish";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/ordered",
-    element: <Thanks />
+    element: <Finish />
   }
 ])
 
