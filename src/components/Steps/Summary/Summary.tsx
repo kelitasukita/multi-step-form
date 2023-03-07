@@ -27,10 +27,7 @@ export default function Summary() {
     return planCosts + addOnCosts;
   }
 
-  const navigate = useNavigate();
-
   const handleClickCleanStorage = () => {
-
     localStorage.removeItem('personalInfo');
     localStorage.removeItem('selectedAddOns');
     localStorage.removeItem('planPeriod');
@@ -38,6 +35,9 @@ export default function Summary() {
     localStorage.removeItem('formPlan');
 
   }
+
+  const navigate = useNavigate();
+  const handleCallNextPage = () => { navigate('/ordered') };
 
   return (
     <div className="box-container">
@@ -104,7 +104,7 @@ export default function Summary() {
             <Link to="/add-ons">
               <span>Go back</span>
             </Link>
-            <button type="submit" onClick={handleClickCleanStorage}>Confirm</button>
+            <button type="submit" onClick={() => { handleClickCleanStorage(); handleCallNextPage(); }}>Confirm</button>
           </div>
 
         </div>
