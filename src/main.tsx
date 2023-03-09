@@ -5,6 +5,7 @@ import router from './components/routes/Routes';
 const formPlan = {
   addOns: {
     online: 'Online service',
+    larger: 'Larger storage',
     customizable: 'Customizable profile',
   },
   monthly: {
