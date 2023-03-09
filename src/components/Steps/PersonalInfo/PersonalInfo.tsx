@@ -72,7 +72,12 @@ export default function personalInfo() {
               <label htmlFor="text">Name</label>
               <span className="error-message">{errors.fullName}</span>
             </div>
-            <input type="text" placeholder="e.g. Stephen King" name="fullName" value={personalInfo.fullName} onChange={handleInputChange} />
+            <input
+              type="text"
+              placeholder="e.g. Stephen King"
+              name="fullName"
+              value={personalInfo.fullName}
+              onChange={handleInputChange} />
           </div>
 
           <div className={`label-box ${errors.email ? 'error' : ''}`}>
@@ -80,7 +85,12 @@ export default function personalInfo() {
               <label htmlFor="email">Email Address</label>
               <span className="error-message">{errors.email}</span>
             </div>
-            <input type="email" placeholder="e.g. stephenking@lorem.com" name="email" value={personalInfo.email} onChange={handleInputChange} />
+            <input
+              type="email"
+              placeholder="e.g. stephenking@lorem.com"
+              name="email"
+              value={personalInfo.email}
+              onChange={handleInputChange} />
           </div>
 
           <div className={`label-box ${errors.phoneNumber ? 'error' : ''}`}>
@@ -88,7 +98,13 @@ export default function personalInfo() {
               <label htmlFor="tel">Phone Number</label>
               <span className="error-message">{errors.phoneNumber}</span>
             </div>
-            <input type="tel" placeholder="e.g. +1 234567 890" name="phoneNumber" value={personalInfo.phoneNumber} onChange={handleInputChange} />
+            <input
+              type="tel"
+              pattern="[0-9]{2}-[0-9]{8}"
+              placeholder="e.g. 06 1234 5678"
+              name="phoneNumber"
+              value={personalInfo.phoneNumber}
+              onChange={handleInputChange} />
           </div>
 
           <button type="submit" onClick={handleButtonClick}>Next Step</button>
