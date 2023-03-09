@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 
-export default function Thanks() {
+export default function Finish() {
   const navigate = useNavigate();
 
   useEffect(() => {
