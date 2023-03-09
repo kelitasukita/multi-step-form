@@ -16,12 +16,9 @@ export default function SelectPlan() {
 
   const navigate = useNavigate();
 
-  const handlePlanPeriod = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { checked } = event.target;
-
-    setYearly(checked);
-    localStorage.setItem('planPeriod', checked ? 'yearly' : 'monthly');
-
+  const handlePlanPeriod = (planPeriod: Boolean) => {
+    setYearly(prevValue => !!planPeriod);
+    localStorage.setItem('planPeriod', planPeriod ? 'yearly' : 'monthly');
   }
 
   const handlePlan = (plan: string) => {
@@ -106,12 +103,24 @@ export default function SelectPlan() {
 
           <div className={"month-year " + (yearly ? 'yearly' : '')}>
             <div className="better-together">
-              <span className={!yearly ? 'selected-period' : ''}>Monthly</span>
+              <span
+                className={!yearly ? 'selected-period' : ''}
+                onClick={() => handlePlanPeriod(false)}>
+                Monthly
+              </span>
               <label className="switch">
-                <input type="checkbox" name='yearly' onChange={handlePlanPeriod} checked={yearly} />
+                <input
+                  type="checkbox"
+                  name='yearly'
+                  onChange={(event) => handlePlanPeriod(event.target.checked)}
+                  checked={yearly} />
                 <strong className="slider round" />
               </label>
-              <span className={yearly ? 'selected-period' : ''}>Yearly</span>
+              <span
+                className={yearly ? 'selected-period' : ''}
+                onClick={() => handlePlanPeriod(true)}>
+                Yearly
+              </span>
             </div>
           </div>
 
@@ -119,10 +128,12 @@ export default function SelectPlan() {
             <Link to="/">
               <span>Go back</span>
             </Link>
-            <button type="submit" onClick={() => { navigate('/add-ons') }}>Next Step</button>
+            <button
+              type="submit"
+              onClick={() => { navigate('/add-ons') }}>Next Step</button>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
