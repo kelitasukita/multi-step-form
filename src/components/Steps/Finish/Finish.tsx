@@ -10,13 +10,17 @@ export default function Finish() {
 
   useEffect(() => {
 
+    console.log('refresh: ' + localStorage.getItem('refresh'))
+
     if (localStorage.getItem('refresh')) {
+      console.log('Vai apagar o refresh')
 
       localStorage.removeItem('refresh');
       navigate('/');
 
     } else {
-      localStorage.setItem('refresh', 'refresh');
+      localStorage.setItem('refresh', 'banana');
+      console.log('setou o refresh')
     }
 
   }, [])
