@@ -6,6 +6,7 @@ export default function Summary() {
 
   const navigate = useNavigate();
 
+  // se localStorage.getItem('formPlan') existir coloca ele ?? se for nulo coloca isso aqui
   const formPlan = JSON.parse(localStorage.getItem('formPlan') ?? '{}');
 
   const selectedPlan = localStorage.getItem('selectedPlan') ?? 'arcade';
@@ -35,7 +36,6 @@ export default function Summary() {
     localStorage.removeItem('selectedAddOns');
     localStorage.removeItem('planPeriod');
     localStorage.removeItem('selectedPlan');
-    localStorage.removeItem('formPlan');
 
     navigate('/ordered')
   }
