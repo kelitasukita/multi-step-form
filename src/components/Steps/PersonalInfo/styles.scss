@@ -4,6 +4,7 @@
   width: 450px;
   height: 72px;
   margin-top: 24px;
+
 }
 
 @mixin form-label {
@@ -31,6 +32,7 @@
 
 .box-container {
   @include box-form-container;
+
 }
 
 .personalInfo-container {
