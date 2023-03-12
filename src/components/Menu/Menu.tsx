@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 export default function Menu() {
   const location = useLocation();
   return (
-    <div className="menu-items">
+    <div className="menu-items-desktop">
 
       <MenuItem
         stepNumberBall="1"
