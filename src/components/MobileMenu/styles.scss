@@ -1,0 +1,34 @@
+@import "../../global.scss";
+
+@media (min-width: 320px) and (max-width: 960px) {
+  .mobile-menu-bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 45.87%;
+    height: 0;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 960px) {
+  .mobile-menu-step-ball {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 961px) {
+  .mobile-menu-bg-image {
+    display: none;
+  }
+}
