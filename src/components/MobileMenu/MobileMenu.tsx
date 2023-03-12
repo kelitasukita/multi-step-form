@@ -10,6 +10,7 @@ export default function MobileMenu() {
       <div className="mobile-menu-bg-image">
         <img src={mobileSvg} alt="" />
       </div>
+
       <div className="mobile-menu-step-ball">
         <MenuItem
           stepNumberBall="1"
