@@ -125,7 +125,9 @@
     cursor: pointer;
 
     @media (min-width: 320px) and (max-width: 960px) {
-      margin-top: 45%;
+      // margin-top: 45%;
+      width: 35%;
+      border-radius: 4px;
     }
 
     &:hover {
