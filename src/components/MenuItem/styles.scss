@@ -1,12 +1,19 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
 .container-step {
   width: 170px;
-  height: 33px; 
+  height: 33px;
   display: flex;
   margin-left: 32px;
   margin-bottom: 32px;
-  
+
+  @media (min-width: 320px) and (max-width: 960px) {
+    position: relative;
+    width: 33px;
+    height: 33px;
+    margin: 0 2% 0;
+  }
+
   .step-ball {
     width: 33px;
     height: 33px;
@@ -15,43 +22,45 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    p {
-      color: $white ;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 16px;
-    }
-
-    &.selected {
-      background: $sky-blue;
-      
-      p {
-        color: $denin;
-      }
-    }
-    
   }
-  
-  .step1 {
-    width: 120px;
-    height: 33px;
-    margin-left: 16px;
+
+  p {
+    color: $white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &.selected {
+    background: $sky-blue;
 
     p {
-      font-size: 12px;
-      line-height: 14px;
-      font-weight: 400;
-      color: $light-blue;
+      color: $denin;
     }
+  }
+}
 
-    strong {
-      font-size: 14px;
-      line-height: 16px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: $white;
-    }
+.step1 {
+  width: 120px;
+  height: 33px;
+  margin-left: 16px;
 
+  @media (min-width: 320px) and (max-width: 960px) {
+    display: none;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: $light-blue;
+  }
+
+  strong {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $white;
   }
 }
