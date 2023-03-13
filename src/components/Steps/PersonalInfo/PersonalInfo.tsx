@@ -110,13 +110,23 @@ export default function personalInfo() {
                 onChange={handleInputChange} />
             </div>
 
+            <button
+              className="desktop-btn"
+              type="submit"
+              onClick={handleButtonClick}>Next Step
+            </button>
           </div>
 
         </div>
 
+
       </div>
-      <button type="submit" onClick={handleButtonClick}>Next Step</button>
-      <footer className='go-back-next-btn'>
+      <footer className='bg-footer'>
+        <button
+          className='responsive-btn'
+          type="submit"
+          onClick={handleButtonClick}>Next Step
+        </button>
 
       </footer>
     </>
