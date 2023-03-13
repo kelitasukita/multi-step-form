@@ -24,6 +24,16 @@
     display: flex;
     justify-content: center;
     margin-top: 10%;
+
+    .step-ball {
+      &.selected {
+        background: $sky-blue;
+
+        p {
+          color: $denin;
+        }
+      }
+    }
   }
 }
 

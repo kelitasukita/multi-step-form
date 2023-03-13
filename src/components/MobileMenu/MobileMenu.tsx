@@ -1,10 +1,13 @@
 import "./styles.scss";
 
+import { useLocation } from 'react-router-dom';
+
 import MenuItem from "../MenuItem/MenuItem";
 
 import mobileSvg from "../../assets/images/bg-sidebar-mobile.svg";
 
 export default function MobileMenu() {
+  const location = useLocation();
   return (
     <>
       <div className="mobile-menu-bg-image">
