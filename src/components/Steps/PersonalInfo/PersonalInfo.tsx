@@ -121,6 +121,7 @@ export default function personalInfo() {
 
 
       </div>
+
       <footer className='bg-footer'>
         <button
           className='responsive-btn'
