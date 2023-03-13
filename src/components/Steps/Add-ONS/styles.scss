@@ -1,4 +1,4 @@
-@import '../../../global.scss';
+@import "../../../global.scss";
 
 .box-container {
   @include box-form-container;
@@ -14,6 +14,10 @@
   height: 275px;
   margin-top: 40px;
 
+  @media (min-width: 320px) and (max-width: 960px) {
+    max-width: 960px;
+    width: 100%;
+  }
 
   .option {
     width: 450px;
@@ -27,6 +31,12 @@
     padding: 16px;
 
     cursor: pointer;
+
+    @media (min-width: 320px) and (max-width: 960px) {
+      max-width: 960px;
+      width: 100%;
+      padding: 10px 10px 10px 16px;
+    }
 
     &:hover {
       border-color: $purple;
@@ -43,7 +53,7 @@
       justify-content: center;
     }
 
-    input[type=checkbox] {
+    input[type="checkbox"] {
       appearance: none;
       width: 20px;
       height: 20px;
@@ -70,16 +80,15 @@
         display: block;
       }
     }
-    
+
     label {
       cursor: pointer;
-      
+
       strong {
         font-size: 16px;
         font-weight: 500;
         line-height: 25px;
         color: $denin;
-
       }
 
       p {
@@ -90,18 +99,15 @@
       }
     }
 
-
     span {
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
       color: $purple;
-
     }
-    
-   }
+  }
 
-   .back-next {
+  .back-next {
     width: 450px;
     height: 48px;
     display: flex;
@@ -109,7 +115,11 @@
     justify-content: space-between;
 
     margin-top: 81px;
-  
+
+    @media (min-width: 320px) and (max-width: 960px) {
+      display: none;
+    }
+
     span {
       display: block;
       padding: 15px 15px 15px 0;
@@ -117,12 +127,12 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 18px;
-  
+
       cursor: pointer;
-  
+
       &:hover {
         color: $denin;
-        transition: .2s;
+        transition: 0.2s;
       }
     }
 
@@ -132,23 +142,19 @@
       background: $denin;
       border-radius: 8px;
       border: none;
-      
+
       font-size: 16px;
       font-weight: 500;
       line-height: 18px;
       color: $white;
-    
+
       float: right;
-    
+
       cursor: pointer;
 
       &:hover {
         background: $next-btn-hover;
       }
-    
     }
   }
-  
-  
-  
-  }
+}
