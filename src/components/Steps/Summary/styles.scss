@@ -1,10 +1,9 @@
-@import '../../../global.scss';
+@import "../../../global.scss";
 
 .summary-title {
   @include title-style;
   margin-bottom: 40px;
-
-} 
+}
 
 .selected-products {
   padding: 16px 24px 24px 24px;
@@ -13,6 +12,11 @@
   background: $very-light-grey;
   border-radius: 8px;
 
+  @media (min-width: 320px) and (max-width: 960px) {
+    max-width: 960px;
+    width: 100%;
+    padding: 16px;
+  }
 
   .selected-plan {
     display: flex;
@@ -40,14 +44,13 @@
       text-decoration-line: underline;
 
       cursor: pointer;
-      
+
       &:hover {
         color: $purple;
       }
     }
 
     .plan-price {
-
       span {
         font-size: 16px;
         font-weight: 700;
@@ -63,6 +66,11 @@
     height: 1px;
     background: $grey;
     margin-bottom: 16px;
+
+    @media (min-width: 320px) and (max-width: 960px) {
+      max-width: 960px;
+      width: 100%;
+    }
   }
 
   .selected-add-ons {
@@ -75,7 +83,6 @@
       margin-bottom: 16px;
     }
     strong {
-      
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -89,8 +96,6 @@
       color: $denin;
     }
   }
-
-
 }
 .total-price {
   display: flex;
@@ -99,7 +104,11 @@
 
   margin-top: 24px;
   padding: 0 24px;
-    
+
+  @media (min-width: 320px) and (max-width: 960px) {
+    padding: 0 16px;
+  }
+
   span {
     font-size: 14px;
     font-weight: 400;
@@ -124,6 +133,9 @@
 
   margin-top: 81px;
 
+  @media (min-width: 320px) and (max-width: 960px) {
+    display: none;
+  }
   span {
     display: block;
     padding: 15px 15px 15px 0;
@@ -136,32 +148,30 @@
 
     &:hover {
       color: $denin;
-      transition: .2s;
+      transition: 0.2s;
     }
   }
 }
 
 .summary-btn {
-  
   button {
     width: 123px;
     height: 48px;
     background: $purple;
     border-radius: 8px;
     border: none;
-    
+
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
     color: $white;
-  
+
     float: right;
-  
+
     cursor: pointer;
-  
+
     &:hover {
       background: $confirm-hover;
     }
-  
   }
 }

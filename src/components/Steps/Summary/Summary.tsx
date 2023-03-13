@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import Menu from '../../Menu/Menu';
+import MobileMenu from '../../MobileMenu/MobileMenu';
 import './styles.scss';
 
 export default function Summary() {
@@ -41,75 +42,90 @@ export default function Summary() {
   }
 
   return (
-    <div className="box-container">
-      <Menu />
-      <div className="form-container">
-        <div className="summary-container">
-          <div className="summary-title">
-            <h1>Finishing up</h1>
-            <p>Double-check everything looks OK before confirming.</p>
-          </div>
+    <>
+      <MobileMenu />
+      <div className="box-container">
+        <Menu />
+        <div className="form-container">
+          <div className="summary-container">
+            <div className="summary-title">
+              <h1>Finishing up</h1>
+              <p>Double-check everything looks OK before confirming.</p>
+            </div>
 
-          <div className="finish-container">
-            <div className="selected-products">
-              <div className="selected-plan">
-                <div className="description-plan">
-                  <strong>
-                    {`${selectedPlan?.charAt(0).toUpperCase() + selectedPlan.slice(1)} 
+            <div className="finish-container">
+              <div className="selected-products">
+                <div className="selected-plan">
+                  <div className="description-plan">
+                    <strong>
+                      {`${selectedPlan?.charAt(0).toUpperCase() + selectedPlan.slice(1)} 
                     (${planPeriod.charAt(0).toUpperCase() + planPeriod.slice(1)})`}
-                  </strong>
-                  <Link to="/select-plan">
-                    <span>Change</span>
-                  </Link>
+                    </strong>
+                    <Link to="/select-plan">
+                      <span>Change</span>
+                    </Link>
+                  </div>
+                  <div className="plan-price">
+                    <span>
+                      ${formPlan[planPeriod].plans[selectedPlan]}
+                      {yearlyOrMonth()}
+                    </span>
+                  </div>
                 </div>
-                <div className="plan-price">
-                  <span>
-                    ${formPlan[planPeriod].plans[selectedPlan]}
-                    {yearlyOrMonth()}
-                  </span>
+
+                <div className="line" />
+
+                <div className="selected-add-ons">
+                  {
+                    <>
+                      {
+                        Object.entries(formPlan.addOns)
+                          .map(([key, label]) => (
+                            selectedAddOns[key] == true ?
+                              <div className="add-ons-item" key={key}>
+                                <strong>{label + ''}</strong>
+                                <span>
+                                  +${formPlan[planPeriod].addOns[key]}
+                                  {yearlyOrMonth()}
+                                </span>
+                              </div> :
+                              ''
+                          ))
+                      }
+                    </>
+                  }
                 </div>
               </div>
 
-              <div className="line" />
-
-              <div className="selected-add-ons">
-                {
-                  <>
-                    {
-                      Object.entries(formPlan.addOns)
-                        .map(([key, label]) => (
-                          selectedAddOns[key] == true ?
-                            <div className="add-ons-item" key={key}>
-                              <strong>{label + ''}</strong>
-                              <span>
-                                +${formPlan[planPeriod].addOns[key]}
-                                {yearlyOrMonth()}
-                              </span>
-                            </div> :
-                            ''
-                        ))
-                    }
-                  </>
-                }
+              <div className="total-price">
+                <span>Total({planPeriod === 'yearly' ? 'per year' : 'per month'})</span>
+                <strong>${total()}{yearlyOrMonth()}</strong>
               </div>
+
             </div>
 
-            <div className="total-price">
-              <span>Total({planPeriod === 'yearly' ? 'per year' : 'per month'})</span>
-              <strong>${total()}{yearlyOrMonth()}</strong>
+            <div className="back-next summary-btn">
+              <Link to="/add-ons">
+                <span>Go back</span>
+              </Link>
+              <button type="submit" onClick={handleClickCleanStorage}>Confirm</button>
             </div>
 
           </div>
-
-          <div className="back-next summary-btn">
-            <Link to="/add-ons">
-              <span>Go back</span>
-            </Link>
-            <button type="submit" onClick={handleClickCleanStorage}>Confirm</button>
-          </div>
-
-        </div>
+        </div >
       </div >
-    </div >
+
+      <footer className='back-next-responsive bg-footer'>
+        <Link to="/add-ons">
+          <span>Go back</span>
+        </Link>
+        <button
+          className='responsive-btn'
+          type="submit"
+          onClick={() => { navigate('/ordered') }}>Next Step
+        </button>
+
+      </footer>
+    </>
   )
 }
