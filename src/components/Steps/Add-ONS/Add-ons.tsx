@@ -136,7 +136,7 @@ export default function AddOns() {
       </div>
 
       <footer className='back-next-responsive bg-footer'>
-        <Link to="/">
+        <Link to="/select-plan">
           <span>Go back</span>
         </Link>
         <button
