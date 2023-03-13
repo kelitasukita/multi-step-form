@@ -31,4 +31,9 @@
   .mobile-menu-bg-image {
     display: none;
   }
+  @media (min-width: 961px) {
+    .mobile-menu-step-ball {
+      display: none;
+    }
+  }
 }
