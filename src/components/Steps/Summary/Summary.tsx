@@ -122,7 +122,7 @@ export default function Summary() {
         <button
           className='responsive-btn'
           type="submit"
-          onClick={() => { navigate('/ordered') }}>Next Step
+          onClick={handleClickCleanStorage}>Next Step
         </button>
 
       </footer>
