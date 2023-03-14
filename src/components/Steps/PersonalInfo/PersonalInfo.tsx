@@ -79,6 +79,7 @@ export default function personalInfo() {
                 type="text"
                 placeholder="e.g. Stephen King"
                 name="fullName"
+                autoComplete='off'
                 value={personalInfo.fullName}
                 onChange={handleInputChange} />
             </div>
@@ -92,6 +93,7 @@ export default function personalInfo() {
                 type="email"
                 placeholder="e.g. stephenking@lorem.com"
                 name="email"
+                autoComplete='off'
                 value={personalInfo.email}
                 onChange={handleInputChange} />
             </div>
@@ -106,6 +108,7 @@ export default function personalInfo() {
                 pattern="[0-9]{2}-[0-9]{8}"
                 placeholder="e.g. 06 1234 5678"
                 name="phoneNumber"
+                autoComplete='off'
                 value={personalInfo.phoneNumber}
                 onChange={handleInputChange} />
             </div>
