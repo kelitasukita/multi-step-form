@@ -22,20 +22,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  p {
-    color: $white;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-  }
-
-  &.selected {
-    background: $sky-blue;
 
     p {
-      color: $denin;
+      color: $white;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &.selected {
+      background: $sky-blue;
+
+      p {
+        color: $denin;
+      }
     }
   }
 }
