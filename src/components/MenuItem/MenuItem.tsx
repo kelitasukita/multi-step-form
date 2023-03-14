@@ -1,6 +1,6 @@
 import './styles.scss';
 
-export default function menuItem(props: any) {
+export default function MenuItem(props: any) {
   return (
 
     <div className="container-step">

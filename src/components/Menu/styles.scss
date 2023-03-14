@@ -1,11 +1,13 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
-.menu-items {
-
+.menu-items-desktop {
   width: 274px;
   height: 568px;
   background: url(../../assets/images/bg-sidebar-desktop.svg) no-repeat;
   margin: 16px;
   padding-top: 40px;
 
+  @media (min-width: 320px) and (max-width: 960px) {
+    display: none;
+  }
 }

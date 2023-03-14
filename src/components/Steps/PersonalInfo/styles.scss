@@ -1,10 +1,13 @@
-@import '../../../global';
+@import "../../../global";
 
 @mixin form-box {
   width: 450px;
   height: 72px;
   margin-top: 24px;
 
+  @media (min-width: 320px) and (max-width: 960px) {
+    margin-top: 10px;
+  }
 }
 
 @mixin form-label {
@@ -12,6 +15,12 @@
   font-weight: 400;
   line-height: 24px;
   color: $denin;
+
+  @media (min-width: 320px) and (max-width: 960px) {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 3px;
+  }
 }
 
 @mixin form-input {
@@ -19,24 +28,34 @@
   height: 48px;
   border: 1px solid $border-color;
   border-radius: 8px;
-  
+
   font-size: 16px;
   font-weight: 500;
   line-height: 25px;
   color: $denin;
-  
-  padding-left: 16px; 
-  
+
+  padding-left: 16px;
+
   cursor: pointer;
+
+  @media (min-width: 320px) and (max-width: 960px) {
+    font-size: 15px;
+    line-height: 17px;
+    border-radius: 4px;
+  }
 }
 
 .box-container {
   @include box-form-container;
-
 }
 
 .personalInfo-container {
-
+  @media (min-width: 320px) and (max-width: 960px) {
+    margin: 0;
+    max-width: 960px;
+    width: 100%;
+    max-height: 376px;
+  }
   .error-message {
     display: none;
   }
@@ -61,12 +80,17 @@
   }
 
   .title-info {
-   @include title-style;
-   margin-bottom: 40px;
+    @include title-style;
+    margin-bottom: 40px;
   }
 
   .label-box {
     @include form-box;
+
+    @media (min-width: 320px) and (max-width: 960px) {
+      max-width: 960px;
+      width: 100%;
+    }
 
     label {
       @include form-label;
@@ -75,33 +99,84 @@
     input {
       @include form-input;
 
-      &:hover, &:focus {
+      @media (min-width: 320px) and (max-width: 960px) {
+        width: 100%;
+      }
+
+      &:hover,
+      &:focus {
         border-color: $purple;
       }
     }
   }
 
   button {
-    width: 123px;
-    height: 48px;
+    @media (min-width: 961px) {
+      width: 123px;
+      height: 48px;
+      background: $denin;
+      border-radius: 8px;
+      border: none;
+
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $white;
+
+      margin-top: 92px;
+      float: right;
+
+      cursor: pointer;
+
+      &:hover {
+        background: $next-btn-hover;
+      }
+    }
+
+    @media (min-width: 320px) and (max-width: 960px) {
+      display: none;
+    }
+  }
+}
+
+.responsive-btn {
+  @media (min-width: 320px) and (max-width: 960px) {
+    font-family: Ubuntu, sans-serif;
     background: $denin;
-    border-radius: 8px;
-    border: none;
-    
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18px;
     color: $white;
-
-    margin-top: 92px;
-    float: right;
-
-    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    width: 27%;
+    height: 65%;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 2;
+    left: 68%;
+    top: 20%;
+    margin: auto;
 
     &:hover {
       background: $next-btn-hover;
     }
-
   }
 
+  @media (min-width: 961px) {
+    display: none;
+  }
+}
+.bg-footer {
+  position: relative;
+  z-index: 1;
+  background: $white;
+  max-width: 960px;
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  @media (min-width: 961px) {
+    display: none;
+  }
 }
