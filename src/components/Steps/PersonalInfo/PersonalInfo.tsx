@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import * as Yup from 'yup';
+
 import Menu from '../../Menu/Menu';
 import MobileMenu from '../../MobileMenu/MobileMenu';
 import './styles.scss';
@@ -8,6 +11,13 @@ interface PersonalInfo {
   fullName: string;
   email: string;
   phoneNumber: string;
+}
+
+interface ValidationError {
+  inner: {
+    path: string;
+    message: string;
+  }[];
 }
 
 export default function personalInfo() {
@@ -40,23 +50,41 @@ export default function personalInfo() {
 
   const navigate = useNavigate();
 
-  const handleButtonClick = () => {
-    if (!personalInfo.fullName || !personalInfo.phoneNumber || !personalInfo.email) {
-      setErrors({
-        fullName: !personalInfo.fullName ? 'This field is required!' : '',
-        email: !personalInfo.email ? 'This field is required!' : '',
-        phoneNumber: !personalInfo.phoneNumber ? 'This field is required!' : '',
-      });
-    } else {
-      setErrors({
+  const telefoneRegex = /^(\d{0,2})\s*(\d{4})\s*(\d{4})$/;
+  const schema = Yup.object().shape({
+    fullName: Yup.string().required('This field is required!').trim(),
+    email: Yup.string().required('This field is required!').email().trim(),
+    phoneNumber: Yup.string().matches(telefoneRegex, 'Invalid phone number').required('This field is required').min(8, 'Must be at least 8 characters').trim()
+  });
+
+  const handleButtonClick = async () => {
+    try {
+      await schema.validate(personalInfo, {
+        abortEarly: false,
+      })
+
+      navigate('/select-plan');
+    } catch (err) {
+
+      const currentErrors = {
         fullName: '',
         email: '',
         phoneNumber: '',
+      };
+
+      (err as ValidationError).inner.forEach((e) => {
+
+        switch (e.path) {
+          case 'fullName': currentErrors.fullName += ' ' + e.message; break;
+          case 'email': currentErrors.email += ' ' + e.message; break;
+          case 'phoneNumber': currentErrors.phoneNumber += ' ' + e.message; break;
+        }
+
       });
 
-      navigate('/select-plan');
+      setErrors(currentErrors)
     }
-  };
+  }
 
   return (
     <>
