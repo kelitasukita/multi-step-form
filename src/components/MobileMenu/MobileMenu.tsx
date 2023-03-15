@@ -10,9 +10,7 @@ export default function MobileMenu() {
   const location = useLocation();
   return (
     <>
-      <div className="mobile-menu-bg-image">
-        <img src={mobileSvg} alt="" />
-      </div>
+      <div className="mobile-menu-bg-image"></div>
 
       <div className="mobile-menu-step-ball">
         <MenuItem
@@ -32,6 +30,7 @@ export default function MobileMenu() {
           selected={location.pathname === '/summary'}
         />
       </div>
+
 
     </>
 
