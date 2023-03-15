@@ -141,6 +141,10 @@
 
 .responsive-btn {
   @media (min-width: 320px) and (max-width: 960px) {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
     font-family: Ubuntu, sans-serif;
     background: $denin;
     color: $white;
