@@ -1,4 +1,5 @@
 $background-desktop: #f2f2f2;
+$desktop-bg: #eff5ff;
 $mobile-bg: #eff5ff;
 $white: #fff;
 $border-color: #d6d9e6;
@@ -94,7 +95,7 @@ $red-errors: #ee374a;
 
 body {
   font-family: Ubuntu, sans-serif;
-  background: $background-desktop;
+  background: $desktop-bg;
 
   width: 100%;
   height: 100%;
