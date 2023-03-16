@@ -51,7 +51,7 @@ export default function AddOns() {
             </div>
 
             <div className="add-ons-options">
-              <div className="option" onClick={() => handleClickCheckbox('online')}>
+              <div className={`option ` + (addOns.online ? 'selected' : '')} onClick={() => handleClickCheckbox('online')}>
                 <div className="checkmark">
                   <input
                     className='check'
@@ -74,7 +74,7 @@ export default function AddOns() {
                 </div>
               </div>
 
-              <div className="option" onClick={() => handleClickCheckbox('larger')}>
+              <div className={`option ` + (addOns.larger ? 'selected' : '')} onClick={() => handleClickCheckbox('larger')}>
                 <div className="checkmark">
                   <input
                     className='check'
@@ -99,7 +99,7 @@ export default function AddOns() {
                 </div>
               </div>
 
-              <div className="option" onClick={() => handleClickCheckbox('customizable')}>
+              <div className={`option ` + (addOns.customizable ? 'selected' : '')} onClick={() => handleClickCheckbox('customizable')}>
                 <div className="checkmark">
                   <input
                     className='check'

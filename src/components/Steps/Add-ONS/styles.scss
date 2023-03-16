@@ -43,8 +43,8 @@
     }
 
     &.selected {
+      border: 1px solid $purple;
       background: $very-light-grey;
-      border-color: $purple;
     }
 
     .checkmark {
