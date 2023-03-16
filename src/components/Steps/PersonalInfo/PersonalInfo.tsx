@@ -100,10 +100,11 @@ export default function personalInfo() {
 
             <div className={`label-box ${errors.fullName ? 'error' : ''}`}>
               <div className="form-label">
-                <label htmlFor="text">Name</label>
+                <label htmlFor="fullName">Name</label>
                 <span className="error-message">{errors.fullName}</span>
               </div>
               <input
+                className='fullName'
                 type="text"
                 placeholder="e.g. Stephen King"
                 name="fullName"
@@ -118,6 +119,7 @@ export default function personalInfo() {
                 <span className="error-message">{errors.email}</span>
               </div>
               <input
+                className='email'
                 type="email"
                 placeholder="e.g. stephenking@lorem.com"
                 name="email"
@@ -128,10 +130,11 @@ export default function personalInfo() {
 
             <div className={`label-box ${errors.phoneNumber ? 'error' : ''}`}>
               <div className="form-label">
-                <label htmlFor="tel">Phone Number</label>
+                <label htmlFor="phoneNumber">Phone Number</label>
                 <span className="error-message">{errors.phoneNumber}</span>
               </div>
               <input
+                className='phoneNumber'
                 type="tel"
                 pattern="[0-9]{2}-[0-9]{8}"
                 placeholder="e.g. 06 1234 5678"
