@@ -12,7 +12,7 @@ export default function MobileMenu() {
     <>
       <div className="mobile-menu-bg-image"></div>
 
-      <div className="mobile-menu-step-ball">
+      <nav className="mobile-menu-step-ball">
         <MenuItem
           stepNumberBall="1"
           selected={location.pathname === '/'}
@@ -29,7 +29,7 @@ export default function MobileMenu() {
           stepNumberBall="4"
           selected={location.pathname === '/summary'}
         />
-      </div>
+      </nav>
 
 
     </>

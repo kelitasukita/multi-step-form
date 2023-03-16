@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 export default function Menu() {
   const location = useLocation();
   return (
-    <div className="menu-items-desktop">
+    <nav className="menu-items-desktop">
 
       <MenuItem
         stepNumberBall="1"
@@ -35,6 +35,6 @@ export default function Menu() {
         title="SUMMARY"
         selected={location.pathname === '/summary'}
       />
-    </div>
+    </nav>
   )
 }

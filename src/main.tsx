@@ -1,6 +1,12 @@
 import ReactDOM from 'react-dom/client';
-import { RouterProvider } from 'react-router-dom';
-import router from './components/routes/Routes';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Menu from './components/Menu/Menu';
+import MobileMenu from './components/MobileMenu/MobileMenu';
+import AddOns from './components/Steps/Add-ONS/Add-ons';
+import Finish from './components/Steps/Finish/Finish';
+import PersonalInfo from './components/Steps/PersonalInfo/PersonalInfo';
+import SelectPlan from './components/Steps/SelectPlan/SelectPlan';
+import Summary from './components/Steps/Summary/Summary';
 
 const formPlan = {
   addOns: {
@@ -39,5 +45,20 @@ const formPlan = {
 localStorage.setItem('formPlan', JSON.stringify(formPlan));
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <RouterProvider router={router} />,
+  <BrowserRouter>
+    <MobileMenu />
+    <main className="box-container">
+      <Menu />
+      <section className="form-container">
+        <Routes>
+          <Route path="/" element={<PersonalInfo />} />
+          <Route path="/select-plan" element={<SelectPlan />} />
+          <Route path="/add-ons" element={<AddOns />} />
+          <Route path="/summary" element={<Summary />} />
+          <Route path="/ordered" element={<Finish />} />
+        </Routes>
+        {/* <RouterProvider router={router} /> */}
+      </section>
+    </main>
+  </BrowserRouter>
 );
