@@ -104,7 +104,7 @@ export default function personalInfo() {
                 <span className="error-message">{errors.fullName}</span>
               </div>
               <input
-                className='fullName'
+                id='fullName'
                 type="text"
                 placeholder="e.g. Stephen King"
                 name="fullName"
@@ -119,7 +119,7 @@ export default function personalInfo() {
                 <span className="error-message">{errors.email}</span>
               </div>
               <input
-                className='email'
+                id='email'
                 type="email"
                 placeholder="e.g. stephenking@lorem.com"
                 name="email"
@@ -134,7 +134,7 @@ export default function personalInfo() {
                 <span className="error-message">{errors.phoneNumber}</span>
               </div>
               <input
-                className='phoneNumber'
+                id='phoneNumber'
                 type="tel"
                 pattern="[0-9]{2}-[0-9]{8}"
                 placeholder="e.g. 06 1234 5678"
