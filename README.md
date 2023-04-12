@@ -1,4 +1,4 @@
-# Mulri Step Form
+# Multi Step Form
 
 This is a responsive Multi Step Form page that I developed using React, Sass, and Typescript to keep improving my frontend skils.
 I also used LocalStorage to save data witch will clean up after to update the last page. 
