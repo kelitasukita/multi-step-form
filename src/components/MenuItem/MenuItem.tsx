@@ -3,8 +3,8 @@ import './styles.scss';
 type MenuProps = {
   selected: boolean;
   stepNumberBall: string;
-  stepNumberTitle: string;
-  title: string;
+  stepNumberTitle?: string;
+  title?: string;
 }
 
 export default function MenuItem(props: MenuProps) {
