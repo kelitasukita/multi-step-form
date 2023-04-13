@@ -1,6 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import Menu from '../../Menu/Menu';
-import MobileMenu from '../../MobileMenu/MobileMenu';
+
 import './styles.scss';
 
 export default function Summary() {

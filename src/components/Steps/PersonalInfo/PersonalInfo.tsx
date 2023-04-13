@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 import * as Yup from 'yup';
 
-import Menu from '../../Menu/Menu';
-import MobileMenu from '../../MobileMenu/MobileMenu';
 import './styles.scss';
 
 interface PersonalInfo {
