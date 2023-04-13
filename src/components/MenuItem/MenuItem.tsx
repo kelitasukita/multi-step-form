@@ -1,6 +1,13 @@
 import './styles.scss';
 
-export default function MenuItem(props: { selected: boolean, stepNumberBall: string, stepNumberTitle: string, title: string }) {
+type MenuProps = {
+  selected: boolean;
+  stepNumberBall: string;
+  stepNumberTitle: string;
+  title: string;
+}
+
+export default function MenuItem(props: MenuProps) {
   return (
 
     <div className="container-step">
